@@ -7,7 +7,7 @@
 * https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
-## Interview Questions##
+## Interview Questions ##
 * http://www.thatjsdude.com/interview/index.html
 * https://www.quora.com/What-JavaScript-questions-are-being-asked-in-UI-interviews
 * https://www.quora.com/What-are-some-good-JavaScript-interview-questions
