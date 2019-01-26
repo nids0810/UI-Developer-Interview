@@ -33,3 +33,7 @@
 * https://scotch.io/tutorials/single-page-apps-with-angularjs-routing-and-templating
 * https://angular.io/resources
 * https://developer.chrome.com/apps/angular_framework
+
+## Data Structure & Algorithms ##
+https://www.youtube.com/watch?v=t0Cq6tVNRBA&list=PLQvqzM9UfFrbglSQhlSaQdWwwoLWwyAxO
+https://www.youtube.com/watch?v=P8Xa2BitN3I&list=PLQvqzM9UfFrZ3ZoTJ7qwdjp_VoZHYPeVu
