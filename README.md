@@ -6,6 +6,7 @@
 * https://www.interviewcake.com/article/javascript/data-structures-coding-interview
 * https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript
+* https://github.com/jeantimex/javascript-problems-and-solutions
 
 ## Interview Questions ##
 * http://www.thatjsdude.com/interview/index.html
