@@ -5,6 +5,7 @@
 * https://www.geeksforgeeks.org/javascript-tutorial/
 * http://www.3two5.com/javascript_interview/hoisting.html
 * https://coderbyte.com/course/javascript-interview-preparation/
+* http://www.3two5.com/javascript_interview/inheritence.html
 * https://www.youtube.com/watch?v=F4IHp87o25M&list=PL9flixWHC9jV6BvZG9fclVSY8ZSETNIcH
 * https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript
@@ -16,7 +17,7 @@
 * https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
 * https://www.greycampus.com/blog/programming/top-javascript-interview-questions-and-answers
 * https://jharaphula.com/advanced-javascript-interview-questions-answers/
-* http://www.3two5.com/javascript_interview/inheritence.html
+
 * https://www.interviewcake.com/article/javascript/data-structures-coding-interview
 * https://www.codementor.io/javascript/tutorial/how-to-ace-javascript-interview-questions-answers
 * https://www.codementor.io/nihantanu/21-essential-javascript-tech-interview-practice-questions-answers-du107p62z?icn=post-3ey8yl7epg&ici=post-du107p62z
