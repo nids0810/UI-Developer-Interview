@@ -31,7 +31,7 @@ The UI-Developer Interview Topic List
 * https://www.reddit.com/r/javascript/comments/3rb88w/ten_questions_ive_been_asked_most_more_than_once/
 * **https://medium.freecodecamp.org/cracking-the-front-end-interview-9a34cd46237
 * https://github.com/h5bp/Front-end-Developer-Interview-Questions
-* **htps://www.techbeamers.com/top-web-developer-interview-questions/
+* **https://www.techbeamers.com/top-web-developer-interview-questions/
 * https://fullstackengine.net/fullstack-javascript-interview-questions/
 * https://codeburst.io/clearing-your-front-end-job-interview-javascript-d5ec896adda4
 * https://www.geeksforgeeks.org/commonly-asked-interview-questions-front-end-developers/
