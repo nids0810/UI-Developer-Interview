@@ -1,10 +1,11 @@
 # UI-Developer-Interview
 
-**The UI-Developer Interview Topic List
+The UI-Developer Interview Topic List
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*GYPX0lTSBmon6ibovulEHQ.jpeg "The Interview List")
 
-## JavaScript ##
 ***
+
+## JavaScript ##
 ### Learn Concepts ###
 * **https://developer.mozilla.org/en-US/docs/Web/JavaScript
 * https://www.w3schools.com/js/default.asp
@@ -36,8 +37,9 @@
 * https://www.geeksforgeeks.org/commonly-asked-interview-questions-front-end-developers/
 * https://frontendmasters.com/books/front-end-handbook/2018/practice/interview-q.html
 
-## AngularJS ##
 ***
+
+## AngularJS ##
 ### AngularJS ###
 * **https://www.thinkful.com/learn/angularjs-tutorial-build-a-gmail-clone/
 * https://scotch.io/tutorials/single-page-apps-with-angularjs-routing-and-templating
@@ -47,13 +49,16 @@
 ### AngularJS Interview Questions ###
 * **https://www.codementor.io/blog/angularjs-interview-questions-answers-du1081n7p
 
-## Data Structure & Algorithms ##
 ***
+
+## Data Structure & Algorithms ##
 ### Data Structure & Algorithms ###
 * **https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
 * **https://www.interviewcake.com/article/javascript/data-structures-coding-interview
 * https://www.youtube.com/watch?v=t0Cq6tVNRBA&list=PLQvqzM9UfFrbglSQhlSaQdWwwoLWwyAxO
 * https://www.youtube.com/watch?v=P8Xa2BitN3I&list=PLQvqzM9UfFrZ3ZoTJ7qwdjp_VoZHYPeVu
+
+***
 
 ### Coding Preparation ###
 * **https://coderbyte.com/course/javascript-interview-preparation/
@@ -66,5 +71,8 @@
 * https://www.hackerrank.com/
 
 ***
+
 ## Company Interview Questions ##
 * https://www.glassdoor.co.in/Interview/index.htm
+
+***
