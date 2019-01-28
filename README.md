@@ -1,15 +1,15 @@
 # UI-Developer-Interview
 
+## -- JavaScript -- ##
+
 ## Learn Concepts ##
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript
 * https://www.w3schools.com/js/default.asp
 * https://www.geeksforgeeks.org/javascript-tutorial/
 * http://www.3two5.com/javascript_interview/hoisting.html
-* https://coderbyte.com/course/javascript-interview-preparation/
 * http://www.3two5.com/javascript_interview/inheritence.html
 * https://www.youtube.com/watch?v=F4IHp87o25M&list=PL9flixWHC9jV6BvZG9fclVSY8ZSETNIcH
 * https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
-* https://developer.mozilla.org/en-US/docs/Web/JavaScript
-* https://github.com/jeantimex/javascript-problems-and-solutions
 
 ## Javascript Interview Questions ##
 * https://www.quora.com/What-JavaScript-questions-are-being-asked-in-UI-interviews
@@ -51,13 +51,15 @@
 * https://www.youtube.com/watch?v=t0Cq6tVNRBA&list=PLQvqzM9UfFrbglSQhlSaQdWwwoLWwyAxO
 * https://www.youtube.com/watch?v=P8Xa2BitN3I&list=PLQvqzM9UfFrZ3ZoTJ7qwdjp_VoZHYPeVu
 
-## Coding/Mock Practice ##
+## Coding Preparation ##
 * https://www.geeksforgeeks.org/quiz-corner-gq/#Data%20Structures%20Mock%20Tests
 * https://leetcode.com/
 * https://practice.geeksforgeeks.org/
 * https://tests4geeks.com/programming-tests
 * https://www.coderbyte.com/language/First%20Factorial
 * https://www.hackerrank.com/
+* https://coderbyte.com/course/javascript-interview-preparation/
+* https://github.com/jeantimex/javascript-problems-and-solutions
 
 ## Company Interview Questions ##
 * https://www.glassdoor.co.in/Interview/index.htm
