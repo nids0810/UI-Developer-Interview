@@ -16,10 +16,10 @@ The UI-Developer Interview Topic List
 
 ### Javascript Interview Questions ###
 * **https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
-* **https://www.codementor.io/javascript/tutorial/how-to-ace-javascript-interview-questions-answers
-* https://www.codementor.io/nihantanu/21-essential-javascript-tech-interview-practice-questions-answers-du107p62z?icn=post-3ey8yl7epg&ici=post-du107p62z
+* **https://www.codementor.io/nihantanu/21-essential-javascript-tech-interview-practice-questions-answers-du107p62z?icn=post-3ey8yl7epg&ici=post-du107p62z
 * https://www.onlineinterviewquestions.com/advanced-javascript-interview-questions/
-* https://jharaphula.com/advanced-javascript-interview-questions-answers/
+* **https://jharaphula.com/advanced-javascript-interview-questions-answers/
+* https://www.codementor.io/javascript/tutorial/how-to-ace-javascript-interview-questions-answers
 * https://www.greycampus.com/blog/programming/top-javascript-interview-questions-and-answers
 * https://www.guru99.com/javascript-interview-questions-answers.html
 * https://www.quora.com/What-JavaScript-questions-are-being-asked-in-UI-interviews
