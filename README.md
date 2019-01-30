@@ -35,13 +35,14 @@ The UI-Developer Interview Topic List
 * **Rest API: https://developer.marklogic.com/try/rest/index
 * Rest API: https://www.guru99.com/restful-web-services.html
 
-* **https://medium.freecodecamp.org/a-practical-es6-guide-on-how-to-perform-http-requests-using-the-fetch-api-594c3d91a547
-* **https://github.com/mdn/fetch-examples
-* **https://appdividend.com/2018/08/20/javascript-fetch-api-example-tutorial/
-* **https://googlechrome.github.io/samples/fetch-api/fetch-post.html
-* **https://gist.github.com/justsml/529d0b1ddc5249095ff4b890aad5e801
-* **https://medium.freecodecamp.org/learn-these-core-javascript-concepts-in-just-a-few-minutes-f7a16f42c1b0
-* **https://medium.freecodecamp.org/7-javascript-methods-that-will-boost-your-skills-in-less-than-8-minutes-4cc4c3dca03f
+* **Fetch: https://medium.freecodecamp.org/a-practical-es6-guide-on-how-to-perform-http-requests-using-the-fetch-api-594c3d91a547
+* **Fetch: https://github.com/mdn/fetch-examples
+* **Fetch: https://appdividend.com/2018/08/20/javascript-fetch-api-example-tutorial/
+* **Fetch: https://googlechrome.github.io/samples/fetch-api/fetch-post.html
+* **Fetch: https://gist.github.com/justsml/529d0b1ddc5249095ff4b890aad5e801
+
+* **Boost: https://medium.freecodecamp.org/learn-these-core-javascript-concepts-in-just-a-few-minutes-f7a16f42c1b0
+* **Boost: https://medium.freecodecamp.org/7-javascript-methods-that-will-boost-your-skills-in-less-than-8-minutes-4cc4c3dca03f
 
 ### Front-End Interview Preparation ###
 * **http://www.thatjsdude.com/interview/index.html
