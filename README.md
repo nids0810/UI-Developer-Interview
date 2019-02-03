@@ -54,6 +54,7 @@ The UI-Developer Interview Topic List
 * https://codeburst.io/clearing-your-front-end-job-interview-javascript-d5ec896adda4
 * https://www.geeksforgeeks.org/commonly-asked-interview-questions-front-end-developers/
 * https://frontendmasters.com/books/front-end-handbook/2018/practice/interview-q.html
+* Important: https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
 
 ***
 
