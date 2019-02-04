@@ -3,7 +3,7 @@
 1. Factorial of a number
 //using for loop
 function factorial(num) {
-	let product = 1;
+  let product = 1;
   for (let i = 2; i <= num; i++) {
   	product = i * product;
   }
@@ -20,13 +20,13 @@ console.log(factorial(5));
 2. String Reversal
 //using JS method
 function reverseString(str) {
-	return str.split("").reverse().join("");
+   return str.split("").reverse().join("");
 }
 console.log(reverseString("nidhi"));
 
 //using for of loop
 function reverseString(str) {
-	let result = "";
+  let result = "";
   for (let char of str) {
   	result = char + result;
   }
@@ -36,7 +36,7 @@ console.log(reverseString("india"));
 
 //using for loop
 function reverseString(str) {
-	let result = "";
+  let result = "";
   for (let i = 0; i < str.length; i++) {
   	result = str[i] + result;
   }
@@ -47,7 +47,7 @@ console.log(reverseString("india"));
 3. Palindrome
 //using JS method
 function isPalindrome(str) {
-	let re = /[^A-Za-z0-9]/g;
+  let re = /[^A-Za-z0-9]/g;
   str = str.toLowerCase().replace(re, "");
   let strNew = str.split("").reverse().join("");
   if(str === strNew) {
@@ -59,7 +59,7 @@ console.log(isPalindrome("race, Car."));
 
 //using for of loop
 function isPalindrome(str) {
-	let re = /[^A-Za-z0-9]/g;
+  let re = /[^A-Za-z0-9]/g;
   str = str.toLowerCase().replace(re, "");
   let strNew = "";
  	for (let char of str) {
@@ -82,7 +82,7 @@ console.log(integerReversal(-1200));
 
 //using for of loop
 function integerReversal(num) {
-	var sign = Math.sign(num);
+  let sign = Math.sign(num);
   num = num.toString();
   let result = "";
   for(let digit of num) {
