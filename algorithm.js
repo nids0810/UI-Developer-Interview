@@ -1,6 +1,6 @@
-#Basic Algorithm questions#
+/* Basic Algorithm questions */
 
-1. Factorial of a number
+/* 1. Factorial of a number */
 //using for loop
 function factorial(num) {
   let product = 1;
@@ -17,7 +17,8 @@ function factorial(num) {
 }
 console.log(factorial(5));
 
-2. String Reversal
+//--------------------------------------------------------------------------------------------------------------------//
+/* 2. String Reversal */
 //using JS method
 function reverseString(str) {
    return str.split("").reverse().join("");
@@ -44,7 +45,8 @@ function reverseString(str) {
 }
 console.log(reverseString("india"));
 
-3. Palindrome
+//--------------------------------------------------------------------------------------------------------------------//
+/* 3. Palindrome */
 //using JS method
 function isPalindrome(str) {
   let re = /[^A-Za-z0-9]/g;
@@ -72,7 +74,8 @@ function isPalindrome(str) {
 }
 console.log(isPalindrome("race, Car."));
 
-4. Integer Reversal
+//--------------------------------------------------------------------------------------------------------------------//
+/* 4. Integer Reversal */
 //using JS methods
 function integerReversal(num) {
 	return parseInt(num.toString().split("").reverse().join("")) * Math.sign(num);
@@ -93,10 +96,11 @@ function integerReversal(num) {
 console.log(integerReversal(8759));
 console.log(integerReversal(-1200));
 
-5. Fizz Buzz
-Given a number as an input, print out every integer from 1 to that number. 
-However, when the integer is divisible by 2, print out “Fizz”; when it’s divisible by 3, 
-print out “Buzz”; when it’s divisible by both 2 and 3, print out “Fizz Buzz”.
+//--------------------------------------------------------------------------------------------------------------------//
+/* 5. Fizz Buzz */
+//Given a number as an input, print out every integer from 1 to that number. 
+//However, when the integer is divisible by 2, print out “Fizz”; when it’s divisible by 3, 
+//print out “Buzz”; when it’s divisible by both 2 and 3, print out “Fizz Buzz”.
 
 function fizzbuzz(number) {
     let output = [];
