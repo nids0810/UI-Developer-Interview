@@ -1,7 +1,6 @@
 #Basic Algorithm questions#
 
 1. Factorial of a number
-
 //using for loop
 function factorial(num) {
 	let product = 1;
@@ -46,7 +45,6 @@ function reverseString(str) {
 console.log(reverseString("india"));
 
 3. Palindrome
-
 //using JS method
 function isPalindrome(str) {
 	let re = /[^A-Za-z0-9]/g;
@@ -74,3 +72,40 @@ function isPalindrome(str) {
 }
 console.log(isPalindrome("race, Car."));
 
+4. Integer Reversal
+//using JS methods
+function integerReversal(num) {
+	return parseInt(num.toString().split("").reverse().join("")) * Math.sign(num);
+}
+console.log(integerReversal(8759));
+console.log(integerReversal(-1200));
+
+//using for of loop
+function integerReversal(num) {
+	var sign = Math.sign(num);
+  num = num.toString();
+  let result = "";
+  for(let digit of num) {
+  	result = digit + result;
+  }
+  return parseInt(result) * sign;
+}
+console.log(integerReversal(8759));
+console.log(integerReversal(-1200));
+
+5. Fizz Buzz
+Given a number as an input, print out every integer from 1 to that number. 
+However, when the integer is divisible by 2, print out “Fizz”; when it’s divisible by 3, 
+print out “Buzz”; when it’s divisible by both 2 and 3, print out “Fizz Buzz”.
+
+function fizzbuzz(number) {
+    let output = [];
+    for (let i = 1; i <= number; i++) {
+        if (i % 6 === 0) output.push("Fizz Buzz");
+        else if (i % 2 === 0) output.push("Fizz");
+        else if (i % 3 === 0) output.push("Buzz");
+        else output.push(i);
+    }
+    return output;
+}
+console.log(fizzbuzz(8));
