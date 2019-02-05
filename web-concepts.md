@@ -1,7 +1,7 @@
 # Web Concepts #
 
 ## Browser ##
-* Important: https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
+* **https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
 * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API
 * https://medium.com/@antwan29/browser-and-web-apis-d48c3fd8739
 
@@ -11,24 +11,24 @@
 * **https://www.tutorialspoint.com/http/index.htm
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 
-## AJAX Calls##
+## AJAX Calls ##
 * https://www.w3schools.com/js/js_ajax_intro.asp
-
-## CORS ##
-* https://medium.com/@jeanpan/what-is-cors-cross-origin-resource-sharing-9f0c463621c6
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
 ## REST ##
 * **https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
 * **https://developer.marklogic.com/try/rest/index
 * Rest API: https://www.guru99.com/restful-web-services.html
 
+## CORS ##
+* https://medium.com/@jeanpan/what-is-cors-cross-origin-resource-sharing-9f0c463621c6
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
 ## Git & Github ##
 * https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
 * https://learnxinyminutes.com/docs/git/
 * http://marklodato.github.io/visual-git-guide/index-en.html
 
-## Javascript Testing & E2E testing ##
+## Javascript Unit & E2E Testing ##
 * https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3
 
 ## Task Runner ##
