@@ -199,3 +199,32 @@ function vowels(str) {
   return matches ? matches.length : 0;
 }
 console.log(vowels("train"));
+
+//===============//
+/* 9. Array Chunking - Given an array and a size, split the array items into a list of arrays of the given size */
+//===============//
+
+//using slice method
+function chunking(array, size) {
+    let chunks = [];
+    let index = 0;
+
+    while (index < array.length) {
+        chunks.push(array.slice(index, index + size));
+        index = index + size;
+    }
+
+    return chunks;
+}
+console.log(chunking([1,2,3,4,5], 2));
+
+//using for loop
+function chunking(array, size) {
+    let chunks = [];
+    for (let i = 0; i < array.length; i += size) {
+        chunks.push(array.slice(i, i + size));
+    }
+
+    return chunks;
+}
+console.log(chunking([1,2,3,4,5], 2));
