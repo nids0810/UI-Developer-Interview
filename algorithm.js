@@ -179,3 +179,23 @@ function isAnagrams(strA, strB) {
   return true;
 }
 console.log(isAnagrams("hello world", "woldr ohell"));
+
+//===============//
+/* 8. Count the number of Vowels */
+//===============//
+function vowelsCount(str) {
+  let count = 0;
+  let vowels = "aeiou";
+  for(let char of str.toLowerCase()) {
+  	if(vowels.includes(char)) count++;
+  }
+  return count;
+}
+console.log(vowelsCount("nidhi"));
+
+//using regular expression
+function vowels(str) {
+  let matches = str.match(/[aeiou]/ig);
+  return matches ? matches.length : 0;
+}
+console.log(vowels("train"));
