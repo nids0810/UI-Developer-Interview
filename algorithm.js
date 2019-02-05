@@ -31,7 +31,7 @@ console.log(reverseString("nidhi"));
 function reverseString(str) {
   let result = "";
   for (let char of str) {
-  	result = char + result;
+    result = char + result;
   }
   return result;
 }
@@ -41,7 +41,7 @@ console.log(reverseString("india"));
 function reverseString(str) {
   let result = "";
   for (let i = 0; i < str.length; i++) {
-  	result = str[i] + result;
+    result = str[i] + result;
   }
   return result;
 }
@@ -118,3 +118,23 @@ function fizzbuzz(number) {
     return output;
 }
 console.log(fizzbuzz(8));
+
+//===============//
+/* 6. Max Character */
+//===============//
+function max(str) {
+  let obj = {};
+  for(let char of str) {
+  	obj[char] = obj[char] + 1 || 1;
+  }
+  let count = 0;
+  let maxchar = null;
+  for(let item in obj) {
+  	if(obj[item] > count) {
+    	count = obj[item];
+      maxchar = item;
+    }
+  }
+  return maxchar;
+}
+console.log(max("nidhi"));
