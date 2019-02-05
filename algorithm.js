@@ -138,3 +138,44 @@ function max(str) {
   return maxchar;
 }
 console.log(max("nidhi"));
+
+//===============//
+/* 7. Anagrams */
+//===============//
+//using JS method - linearithmic time
+function sortString(str) {
+  let re = /[^A-Za-z0-9]/g;
+  return str.replace(re, "").toLowerCase().split("").sort().join("");
+ }
+
+function isAnagram(str1, str2) {
+  str1 = sortString(str1);
+  str2 = sortString(str2);
+  if(str1 === str2) {
+  	return true;
+  }
+  return false;
+}
+console.log(isAnagram("hello world", "world hello"));
+
+//linear time complexity and a constant space complexity
+function createStringObject(str) {
+  let re = /[^A-Za-z0-9]/g;
+  str = str.replace(re, "").toLowerCase();
+  let obj = {};
+  for(let char of str) {
+  	obj[char] = obj[char] + 1 || 1;
+  }
+  return obj;
+}
+
+function isAnagrams(strA, strB) {
+  let stringA = createStringObject(strA);
+  let stringB = createStringObject(strB);
+  if(Object.keys(stringA).length !== Object.keys(stringB).length) return false;
+  for(let item in stringA) {
+  	if(stringA[item] !== stringB[item]) return false; 
+  }
+  return true;
+}
+console.log(isAnagrams("hello world", "woldr ohell"));
