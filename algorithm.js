@@ -274,3 +274,14 @@ function reverseWord(word) {
   return newArr.join(" ");
 }
 console.log(reverseWord("I love India!!"));
+
+//using JS method
+function reverseWord(word) {
+  let newArr = [];
+  for(let item of word.split(" ")) {
+  	item = item.split("").reverse().join("");
+    newArr.push(item);
+  }
+  return newArr.join(" ");
+}
+console.log(reverseWord("I love JavaScript!!"));
