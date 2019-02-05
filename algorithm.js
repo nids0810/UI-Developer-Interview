@@ -259,3 +259,18 @@ function reverseArray(arr) {
 }
 console.log(reverseArray([1,3,7,2,6,9]));
 
+//===============//
+/* 11. Reverse Words - Given a phrase, reverse the order of the characters of each word */
+//===============//
+function reverseWord(word) {
+  let newArr = [];
+  for(let item of word.split(" ")) {
+ 	let stringWord = "";
+	for(let char of item) {
+		stringWord = char + stringWord;
+	}
+     newArr.push(stringWord);
+  }
+  return newArr.join(" ");
+}
+console.log(reverseWord("I love India!!"));
