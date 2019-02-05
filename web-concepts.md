@@ -6,8 +6,8 @@
 * https://medium.com/@antwan29/browser-and-web-apis-d48c3fd8739
 
 ## HTTP ##
-* **HTTP: https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177
-* **HTTP: https://www.tutorialspoint.com/http/index.htm
+* **https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177
+* **https://www.tutorialspoint.com/http/index.htm
 * **https://www.tutorialspoint.com/http/index.htm
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 
