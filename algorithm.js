@@ -285,3 +285,11 @@ function reverseWord(word) {
   return newArr.join(" ");
 }
 console.log(reverseWord("I love JavaScript!!"));
+
+//using map()
+function reverseWord(words) {
+  return words.split(" ").map(function(value){
+  	return value.split("").reverse().join("");
+  }).join(" ");
+}
+console.log(reverseWord("I love JavaScript!!"));
