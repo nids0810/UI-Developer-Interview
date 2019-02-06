@@ -1,0 +1,89 @@
+//=================================//
+//---------An AJAX Request---------//
+//=================================//
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest(); // Create request object
+  
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Run the method when response is available
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true); // Assign method, url, async to the Request variable
+  xhttp.send(); // Send request to server
+}
+</script>
+
+//=================================//
+//--------An Async Request---------//
+//=================================//
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+
+<h2>The XMLHttpRequest Object</h2>
+
+<button type="button" onclick="loadDoc('ajax_info.txt', myFunction)">Change Content
+</button>
+</div>
+
+<script>
+//myFunction is a callback function. When we send a async request, the script won't wait for the response. So, when the response is available then the script will run the callback function "myFunction".
+
+function loadDoc(url, cFunction) {
+  var xhttp;
+  xhttp=new XMLHttpRequest();
+  
+  // This function will wait for response to arrive
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Will execute the Callback function when the response will arrive
+      cFunction(this); 
+    }
+  };
+  
+  xhttp.open("GET", url, true); // Created an async request 
+  xhttp.send(); // Request sent to server and will not wait for the response to arrive
+  alert('Response is empty since it is not arrived: '+ xhttp.responseText); // Will print empty string because the response is not available yet 
+}
+
+function myFunction(xhttp) {
+  // Will print response string because it was executed after the response was available
+  alert('Callback activated because now the response has arrived: '+ xhttp.responseText);
+}
+</script>
+</body>
+</html>
+
+//=================================//
+//--------A Sync Request-----------//
+//=================================//
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<p id="demo">Let AJAX change this text.</p>
+
+<button type="button" onclick="loadDoc()">Change Content</button>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest(); // Line 1
+  xhttp.open("GET", "ajax_info.txt", false); // Line 2: Created a sync request
+  xhttp.send(); // Line 3: Sent the request
+  // The script will wait for the respone to arrive from server between line 3 and 4
+  //Line 4: The response is available now, and the alert will print the now available response text
+  alert('Response is available since script waited for it automatically: '+ xhttp.responseText);
+}
+</script>
+</body>
+</html>
+
