@@ -303,11 +303,25 @@ function removeDuplicates(names) {
 }
 console.log(removeDuplicates(['John', 'Paul', 'George', 'Ringo', 'John']));
 
+// using for loop and temp variable
+let a = [1, 1, 2, 2, 4];
+let b = [];
+let len = a.length
+let temp;
+a.sort();
+for(let i = 0; i < len; i++) {
+	if(a[i] !== temp) {
+  	temp = a[i];
+  	b.push(a[i]);
+  }
+}
+console.log(b);
+
 //using object when array conatins number items.
 function removeDuplicate(array) {
   let obj = {};
   for(let item of array) {
-  	obj[item] = obj[item] + 1 || 1;
+  	obj[item] = true;
   }
   return Object.keys(obj).map(function(key) { return parseInt(key) });
 }
