@@ -302,3 +302,13 @@ function removeDuplicates(names) {
   return Array.from(iterableObj);
 }
 console.log(removeDuplicates(['John', 'Paul', 'George', 'Ringo', 'John']));
+
+//using object
+function removeDuplicate(array) {
+  let obj = {};
+  for(let item of array) {
+  	obj[item] = obj[item] + 1 || 1;
+  }
+  return Object.keys(obj).map(function(key) { return parseInt(key) });
+}
+console.log(removeDuplicate([1, 7, 3, 7, 4, 5, 7, 5]));
