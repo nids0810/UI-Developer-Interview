@@ -303,7 +303,7 @@ function removeDuplicates(names) {
 }
 console.log(removeDuplicates(['John', 'Paul', 'George', 'Ringo', 'John']));
 
-//using object
+//using object when array conatins number items.
 function removeDuplicate(array) {
   let obj = {};
   for(let item of array) {
