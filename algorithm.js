@@ -293,3 +293,12 @@ function reverseWord(words) {
   }).join(" ");
 }
 console.log(reverseWord("I love JavaScript!!"));
+
+//===============//
+/* 12. Remove duplicates from an array */
+//===============//
+function removeDuplicates(names) {
+  let iterableObj = new Set(names);
+  return Array.from(iterableObj);
+}
+console.log(removeDuplicates(['John', 'Paul', 'George', 'Ringo', 'John']));
