@@ -8,7 +8,7 @@
 ## HTTP ##
 * **https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177
 * **https://www.tutorialspoint.com/http/index.htm
-* **https://www.tutorialspoint.com/http/index.htm
+* https://www.webopedia.com/quick_ref/OSI_Layers.asp
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 
 ## AJAX Calls ##
