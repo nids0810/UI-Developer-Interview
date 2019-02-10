@@ -13,6 +13,9 @@
 
 ## AJAX Calls ##
 * https://www.w3schools.com/js/js_ajax_intro.asp
+* https://www.javascripture.com/Request
+* https://www.javascripture.com/Response
+
 
 ## REST ##
 * **https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
