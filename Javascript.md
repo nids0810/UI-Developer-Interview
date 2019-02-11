@@ -33,6 +33,7 @@
 * https://gist.github.com/justsml/529d0b1ddc5249095ff4b890aad5e801
 * https://davidwalsh.name/fetch
 * https://github.github.io/fetch/
+* Collections: https://github.com/toddmotto/public-apis
 
 ## Boost ##
 * **https://medium.freecodecamp.org/learn-these-core-javascript-concepts-in-just-a-few-minutes-f7a16f42c1b0
