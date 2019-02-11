@@ -9,6 +9,7 @@
 * http://www.3two5.com/javascript_interview/hoisting.html
 * http://www.3two5.com/javascript_interview/inheritence.html
 * https://www.youtube.com/watch?v=F4IHp87o25M&list=PL9flixWHC9jV6BvZG9fclVSY8ZSETNIcH
+* https://blog.teamtreehouse.com/javascript-concurrency
 
 ## Interview Questions ##
 * **https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
