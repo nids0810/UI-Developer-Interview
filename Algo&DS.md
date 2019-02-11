@@ -1,7 +1,8 @@
 # Data Structure & Algorithms #
 
 ## Complexities ##
-http://bigocheatsheet.com/
+* http://bigocheatsheet.com/
+* https://algs4.cs.princeton.edu/cheatsheet/
 
 ## Data Structure & Algorithms ##
 * **https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
