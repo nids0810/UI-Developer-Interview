@@ -31,6 +31,8 @@
 * https://appdividend.com/2018/08/20/javascript-fetch-api-example-tutorial/
 * https://googlechrome.github.io/samples/fetch-api/fetch-post.html
 * https://gist.github.com/justsml/529d0b1ddc5249095ff4b890aad5e801
+* https://davidwalsh.name/fetch
+* https://github.github.io/fetch/
 
 ## Boost ##
 * **https://medium.freecodecamp.org/learn-these-core-javascript-concepts-in-just-a-few-minutes-f7a16f42c1b0
