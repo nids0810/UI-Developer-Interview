@@ -4,13 +4,14 @@
 * **https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
 * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API
 * https://medium.com/@antwan29/browser-and-web-apis-d48c3fd8739
+* https://www.webopedia.com/quick_ref/OSI_Layers.asp
+* https://www.thegeekstuff.com/2011/11/tcp-ip-fundamentals/
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/100
 
 ## HTTP ##
 * **https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177
 * **https://www.tutorialspoint.com/http/index.htm
-* https://www.webopedia.com/quick_ref/OSI_Layers.asp
-* https://www.thegeekstuff.com/2011/11/tcp-ip-fundamentals/
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/100
+* http://www.simplehtmlguide.com/cheatsheet.php
 
 ## AJAX Calls ##
 * https://www.w3schools.com/js/js_ajax_intro.asp
