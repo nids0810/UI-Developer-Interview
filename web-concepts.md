@@ -18,6 +18,8 @@
 * https://www.javascripture.com/Request
 * https://www.javascripture.com/Response
 
+## Public APIs ##
+* https://github.com/toddmotto/public-apis
 
 ## REST ##
 * **https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
