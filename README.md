@@ -6,7 +6,8 @@ The UI-Developer Interview Topic List
 ***
 
 ## Front-End Courses ##
-https://hackr.io/
+* https://hackr.io/
+* https://medium.com/tech-tajawal/modern-frontend-developer-in-2018-4c2072fa2b9c
 
 ***
 
