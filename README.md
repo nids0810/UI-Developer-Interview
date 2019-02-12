@@ -1,6 +1,5 @@
 # UI-Developer-Interview
 
-The UI-Developer Interview Topic List
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*GYPX0lTSBmon6ibovulEHQ.jpeg "The Interview List")
 
 ***
