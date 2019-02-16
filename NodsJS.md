@@ -53,4 +53,4 @@ To run the application, use the following command
 open [http://localhost:3000](http://localhost:3000) in a browser to see the words Hello World.
 
 To install the corresponding package and save it in node modules and list an entry in dependencies in package.jason file.
-`npm install – save`
+`npm install package -- save`
