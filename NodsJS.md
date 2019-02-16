@@ -1,19 +1,12 @@
 
-Commands
-* npm install
-* npm install grunt
-* bower install
-* grunt buildprod
-* grunt builddev
+https://codeburst.io/node-js-by-example-part-1-668376cd4f96
 
-*During the installation of bower, may show the error unable to connect to GitHub. Enter the cmd bower install again in same command prompt.
-
-Npm install -g :
 It will install the npm package and allows to use globally.
+`npm install -g`
 
 Initiate a new Node application. Run this under an empty folder. 
 
-```npm init``` 
+`npm init`
 
 This should create a `package.json` file. The file should look like this.
 
@@ -54,3 +47,32 @@ open [http://localhost:3000](http://localhost:3000) in a browser to see the word
 
 To install the corresponding package and save it in node modules and list an entry in dependencies in package.jason file.
 `npm install package -- save`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Commands
+* npm install
+* npm install grunt
+* bower install
+* grunt buildprod
+* grunt builddev
+
+*During the installation of bower, may show the error unable to connect to GitHub. Enter the cmd bower install again in same command prompt.
+
