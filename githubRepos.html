@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API Testing</title>
+	<style>
+		#error {
+			margin-top: 20px;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+<h1>Fetch data from Github</h1>
+
+<div id="main">
+	<input type="text" id="username" placeHolder="Enter username" required>
+	<button id="click" onclick="getReposDetails()">Click Me</button>
+	<div id="containerList"></div>
+	<div id="error"></div>
+</div>
+
+<script>
+
+const url = 'https://api.github.com/users/';
+var listContainer = document.getElementById('containerList');
+var errorElement = document.getElementById('error');
+
+function getReposDetails() {
+	reset();
+	var getUsername = document.getElementById('username').value;
+	var request = url + getUsername + '/repos';
+	fetch(request)
+	.then(function(res){
+		if(res.ok) {
+			errorElement.style.display = 'none';
+			return res.json();
+		}
+		return Promise.reject('with status error: ' + res.status);
+	}).then(function(data){
+		for(var item of data) {
+			var ul = document.createElement('ul');
+			ul.setAttribute('class', 'dataList');
+			listContainer.appendChild(ul);
+			for(var keys in item) { 
+				if((key === 'id') || (key === 'name') || (key === 'html_url') || (key === 'updated_at')) {
+					var li = document.createElement('li');
+					ul.appendChild(li);
+					li.innerHTML = keys + " = " + item[keys];
+				}
+			}
+			// Object.entries can also be used
+			/*for(var [key, value] of Object.entries(item)) {
+				if((key === 'id') || (key === 'name') || (key === 'html_url') || (key === 'updated_at')) {
+					var li = document.createElement('li');
+					ul.appendChild(li);
+					li.innerHTML = key + " = " + value;
+				}
+			}*/
+		}
+
+	}).catch(function(err){
+		errorElement.innerHTML = "Please enter a valid username";
+		console.log('error encountered ' + err);
+	})
+}
+
+function reset() {
+	errorElement.innerHTML = "";
+	errorElement.style.display = 'block';
+	listContainer.innerHTML = "";
+	/*if(listContainer.hasChildNodes()) {
+		while (listContainer.hasChildNodes()) {
+            listContainer.removeChild(listContainer.firstChild);
+        }
+	}*/
+}
+
+</script>
+</body>
+</html>
