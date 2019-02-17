@@ -326,3 +326,17 @@ function removeDuplicate(array) {
   return Object.keys(obj).map(function(key) { return parseInt(key) });
 }
 console.log(removeDuplicate([1, 7, 3, 7, 4, 5, 7, 5]));
+
+//===============//
+/* 13. Given a phrase, capitalize every word */
+//===============//
+//Using map
+function capitalize(str){
+	var str2 = str.split(" ").map(function(item){
+    		var firstitem = item[0].toUpperCase();
+		var res = item.slice(1);
+        	return firstitem + res;
+    	});
+    return str2.join(" ");
+}
+console.log(capitalize("hello world"));
