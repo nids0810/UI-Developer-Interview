@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+	<title>API Methods Testing</title>
+	<style>
+		#error {
+			margin-top: 20px;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+<div id="userListContainer">
+	<input id="pageId" type="text" placeholder="enter pageId" required>
+	<button id="getList" onclick="getUserList()">Get User List</button>
+	<p id="error"></p>
+</div>
+<div id="userDetailContainer">
+	<input id="userId" type="text" placeholder="enter userId" required>
+	<button id="userList" onclick="getUserDetail()">Get User Details</button>
+	<p id="error2"></p>
+</div>
+<div id="createUserContainer">
+	<input id="cname" type="text" placeholder="enter name" required>
+	<input id="cjob" type="text" placeholder="enter designation" required>
+	<button id="create" onclick="createUser()">Click to add users</button>
+	<p id="error3"></p>
+</div>
+<div id="updateUserContainer">
+	<input id="name" type="text" placeholder="enter name" required>
+	<input id="job" type="text" placeholder="enter designation" required>
+	<button id="update" onclick="updateUser()">Click to add users</button>
+	<p id="error4"></p>
+</div>
+
+<script>
+
+// Get user list by entering page ID
+const url = 'https://reqres.in/api/users';
+
+function getUserList() {
+	var pageID = document.getElementById('pageId').value; // 2
+	var request = url + '?page=' + pageID;
+
+	fetch(request)
+	.then(function(res){
+		if(res.ok){
+			return res.json();
+		}
+		return Promise.reject('API error with status ' + res.status);
+	}).then(function(data){
+		console.log(data.data);
+	}).catch(function(err){
+		document.getElementById('error').innerHTML = 'Please enter valid number';
+		console.log(err);
+	})
+}
+
+// Get user detail by entering user ID
+
+function getUserDetail() {
+	var userID = document.getElementById('userId').value; // 2
+	var request = url + '/' + userID;
+
+	fetch(request)
+	.then(function(res){
+		if(res.ok){
+			return res.json();
+		}
+		return Promise.reject('API error with status ' + res.status);
+	}).then(function(data){
+		console.log(data.data);
+	}).catch(function(err){
+		document.getElementById('error2').innerHTML = 'Please enter valid number';
+		console.log(err);
+	})
+}
+
+// Add user using POST method
+
+function createUser() {
+	var createName = document.getElementById('cname').value;
+	var createjobTitle = document.getElementById('cjob').value;
+
+	var request = new Request(url, {
+		method: 'POST',
+		headers: {
+  			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			'name': createName,
+    		'job': createjobTitle
+		})
+	})
+
+	fetch(request)
+	.then(function(res){
+		if(res.ok){
+			return res.json();
+		}
+		return Promise.reject('API error with status ' + res.status);
+	}).then(function(data){
+		console.log(data);
+	}).catch(function(err){
+		document.getElementById('error3').innerHTML = 'Please enter valid number';
+		console.log(err);
+	})
+}
+
+// update list by adding name and job title
+
+function updateUser() {
+	var userName = document.getElementById('name').value;
+	var jobTitle = document.getElementById('job').value;
+	var urlMody = url + '/2';
+	
+	var request = new Request(urlMody, {
+		method: 'PUT',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			'name': userName,
+			'job': jobTitle
+		})
+	})
+
+	fetch(request)
+	.then(function(res){
+		if(res.ok){
+			return res.json();
+		}
+		return Promise.reject('API error with status ' + res.status);
+	}).then(function(data){
+		console.log(data);
+	}).catch(function(err){
+		document.getElementById('error4').innerHTML = 'Please enter valid number';
+		console.log(err);
+	})
+}
+
+</script>
+</body>
+</html>
