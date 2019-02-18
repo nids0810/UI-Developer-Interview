@@ -362,7 +362,7 @@ console.log(capitalize("hello world"));
 console.log(isNote("nidhi is", "my name is nidhi")); 
 
 //===============//
-/* 14.Mean, Median, Mode */
+/* 15.Mean, Median, Mode */
 //===============//
     function findMean(arr) {
         var total = arr.reduce(function(total, value){
@@ -404,7 +404,7 @@ console.log(isNote("nidhi is", "my name is nidhi"));
     console.log(findMode([1, 2, 2, 3, 4]));
 
 //===============//
-/* 15.Two Sum: Given an array of numbers, return all pairs that add up to a given sum. The numbers can be used more than once */
+/* 16.Two Sum: Given an array of numbers, return all pairs that add up to a given sum. The numbers can be used more than once */
 //===============//
 function twoSum(arr, target) {
     var obj = {};
@@ -419,3 +419,29 @@ function twoSum(arr, target) {
     return newArr;
 }
 console.log(twoSum([6, 3, 2, 5, 4], 9));
+
+//===============//
+/* 17. For a given number, find all the prime numbers from zero to that number */
+//===============//
+
+function isPrime(n) {
+    if(n < 2) {
+        return false;
+    } else if(n === 2) return true;
+    for(var i = 2; i < n; i++) {
+        if(n % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+function primes(num) {
+    var arr = [];
+    for(var i = 0; i <= num; i++) {
+        if(isPrime(i)) {
+            arr.push(i);
+        }
+    }
+    return arr;
+}
+console.log(primes(20));
