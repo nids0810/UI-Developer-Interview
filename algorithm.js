@@ -360,3 +360,45 @@ console.log(capitalize("hello world"));
   return true;
 }
 console.log(isNote("nidhi is", "my name is nidhi")); 
+
+//===============//
+/* 14.Mean, Median, Mode */
+//===============//
+    function findMean(arr) {
+        var total = arr.reduce(function(total, value){
+            return total + value;
+        });
+        var mean = (total/arr.length).toFixed(2);
+        return mean;
+    }
+
+    function findMedian(arr) {
+        arr.sort();
+        var num;
+        var len = arr.length;
+        if(len % 2 !== 0) {
+            num = (len+1)/2;
+        } else {
+            num = ((len/2) + (len/2) + 1)/2;
+        }
+        return arr[num-1];
+    }
+
+    function findMode(arr) {
+        var obj = {};
+        var count = 0;
+        var maxNum = null;
+        for(var item of arr) {
+            obj[item] = obj[item] + 1 || 1;
+
+            if(obj[item] > count) {
+                count = obj[item];
+                maxNum = item;
+            }
+        }
+        return maxNum;
+    }
+
+    console.log(findMean([1, 2, 2, 3, 4]));
+    console.log(findMedian([1, 2, 2, 3, 4]));
+    console.log(findMode([1, 2, 2, 3, 4]));
