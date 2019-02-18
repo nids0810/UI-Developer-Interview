@@ -351,7 +351,7 @@ console.log(capitalize("hello world"));
   	}
   	for(var item of note.toLowerCase().split(" ")) {
     	if(obj[item]) {
-      	obj[item]--;
+      		obj[item]--;
     	}
     	else {
       	return false;
