@@ -402,3 +402,20 @@ console.log(isNote("nidhi is", "my name is nidhi"));
     console.log(findMean([1, 2, 2, 3, 4]));
     console.log(findMedian([1, 2, 2, 3, 4]));
     console.log(findMode([1, 2, 2, 3, 4]));
+
+//===============//
+/* 15.Two Sum: Given an array of numbers, return all pairs that add up to a given sum. The numbers can be used more than once */
+//===============//
+function twoSum(arr, target) {
+    var obj = {};
+    var newArr = [];
+    for(var item of new Set(arr)) {
+        obj[item] = true;
+        var diff = target - item;
+        if(obj[diff]) {
+            newArr.push([diff, item]);
+        }
+    }
+    return newArr;
+}
+console.log(twoSum([6, 3, 2, 5, 4], 9));
