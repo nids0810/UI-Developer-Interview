@@ -340,3 +340,23 @@ function capitalize(str){
     return str2.join(" ");
 }
 console.log(capitalize("hello world"));
+
+//===============//
+/* 14.Ransom Note */
+//===============//
+ function isNote(note, mag) {
+  	var obj = {};
+  	for(var char of mag.toLowerCase().split(" ")) {
+    		obj[char] = obj[char] + 1 || 1;
+  	}
+  	for(var item of note.toLowerCase().split(" ")) {
+    	if(obj[item]) {
+      	obj[item]--;
+    	}
+    	else {
+      	return false;
+    }
+  }
+  return true;
+}
+console.log(isNote("nidhi is", "my name is nidhi")); 
