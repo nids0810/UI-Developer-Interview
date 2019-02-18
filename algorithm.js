@@ -445,3 +445,14 @@ function primes(num) {
     return arr;
 }
 console.log(primes(20));
+
+//===============//
+/* 18. Implement a function that returns the fibonacci number at a given index */
+//===============//
+function fibonacci(index) {
+    if(index > 0 && index < 3) {
+        return 1;
+    }
+    return fibonacci(index - 1) + fibonacci(index - 2);
+}
+console.log(fibonacci(10));
