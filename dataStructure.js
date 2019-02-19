@@ -172,3 +172,18 @@ const bubbleSort = function(arr) {
 };
 
 console.log(bubbleSort([5, 4, 3, 2, 1, 10]));
+
+// Insertion sort - inefficient O(n2)
+const insertionSort = function(array) {
+    for (let i = 1; i < array.length; i++) {
+        for (let j = 0; j < i; j++) {
+            if (array[i] < array[j]) {
+                let temp = array.splice(i, 1);
+                array.splice(j, 0, temp[0]);
+            }
+        }
+    }
+    return array;
+};
+
+console.log(insertionSort([5, 4, 3, 2, 1, 1, 7]));
