@@ -214,3 +214,24 @@ const merge = function(left, right) {
 };
 
 console.log(mergeSort([5, 4, 3, 2, 1, 1, 7]));
+
+// Counting Sort - most efficient O(n + k)
+const countingSort = function(array, max) {
+    const counts = new Array(max + 1);
+    counts.fill(0);
+    array.forEach(function(value){counts[value]++});
+
+    const result = [];
+    let resultIndex = 0;
+
+    counts.forEach(function(count, index) {
+        for (let i = 0; i < count; i++) {
+            result[resultIndex] = index;
+            resultIndex++;
+        }
+    });
+
+    return result;
+};
+
+console.log(countingSort([5, 4, 3, 2, 1, 1, 7], 7));
