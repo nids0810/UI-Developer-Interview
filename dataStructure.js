@@ -154,3 +154,21 @@ chain.insertHead(3);
 chain.head.next.next.next = chain.head;
         
 console.log(circular(chain));
+
+// Bubble sort - most inefficient O(n2)
+const bubbleSort = function(arr) {
+   let swapped;
+   do {
+        swapped = false;
+        arr.forEach(function(item, i){
+            if(item > arr[i+1]) {
+                [arr[i], arr[i+1]] = [arr[i+1], arr[i]];
+                swapped = true;
+            }
+        });
+
+   } while(swapped);
+   return arr;
+};
+
+console.log(bubbleSort([5, 4, 3, 2, 1, 10]));
