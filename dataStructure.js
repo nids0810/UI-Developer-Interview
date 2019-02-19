@@ -188,6 +188,40 @@ const insertionSort = function(array) {
 
 console.log(insertionSort([5, 4, 3, 2, 1, 1, 7]));
 
+//Selection sort
+function selectionSort(arr) {
+    for(var i = 0; i < arr.length; i++) {
+        var minIndex = i;
+        for(var j = i + 1; j < arr.length; j++) {
+            if(arr[j] < arr[minIndex]) minIndex = j;
+        }
+        if(minIndex !== i) {
+            var temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }
+    }
+    return arr;
+}
+console.log(selectionSort([3, 2, 2, 1, 8, 4, 3]));
+
+//Quick sort
+const quickSort = function(array) {
+    if (array.length < 2) return array;
+
+    const pivot = array[array.length - 1];
+    const left = [],
+        right = [];
+
+    for (let i = 0; i < array.length - 1; i++) {
+        if (array[i] < pivot) left.push(array[i]);
+        else right.push(array[i]);
+    }
+
+    return [...quickSort(left), pivot, ...quickSort(right)];
+};
+console.log(quickSort([3, 2, 2, 1, 8, 4, 3]));
+
 // Merge sort - efficient O(nlogn)
 const mergeSort = function(array) {
     if (array.length < 2) return array;
@@ -235,20 +269,3 @@ const countingSort = function(array, max) {
 };
 
 console.log(countingSort([5, 4, 3, 2, 1, 1, 7], 7));
-
-//Selection sort
-function selectionSort(arr) {
-    for(var i = 0; i < arr.length; i++) {
-        var minIndex = i;
-        for(var j = i + 1; j < arr.length; j++) {
-            if(arr[j] < arr[minIndex]) minIndex = j;
-        }
-        if(minIndex !== i) {
-            var temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
-        }
-    }
-    return arr;
-}
-console.log(selectionSort([3, 2, 2, 1, 8, 4, 3]));
