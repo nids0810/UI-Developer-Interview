@@ -235,3 +235,20 @@ const countingSort = function(array, max) {
 };
 
 console.log(countingSort([5, 4, 3, 2, 1, 1, 7], 7));
+
+//Selection sort
+function selectionSort(arr) {
+    for(var i = 0; i < arr.length; i++) {
+        var minIndex = i;
+        for(var j = i + 1; j < arr.length; j++) {
+            if(arr[j] < arr[minIndex]) minIndex = j;
+        }
+        if(minIndex !== i) {
+            var temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }
+    }
+    return arr;
+}
+console.log(selectionSort([3, 2, 2, 1, 8, 4, 3]));
