@@ -36,6 +36,13 @@ function reverseString(str) {
   return result;
 }
 console.log(reverseString("india"));
+//using reduce()
+function reverse(str) {
+	return str.split('').reduce(function(res, char){
+  	return res = char + res;
+  }, '');
+}
+console.log(reverse('Greetings!'));
 
 //using for loop
 function reverseString(str) {
