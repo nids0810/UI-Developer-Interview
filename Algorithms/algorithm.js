@@ -453,6 +453,39 @@ function primes(num) {
 }
 console.log(primes(20));
 
+//using better technique
+
+function isPrime(n) {
+	var count = 0;
+	if(n === 2) {
+		return true;
+	}
+	if(n<2 || n%2 === 0) {
+		return false;
+	}
+	for(var i=3; i <= Math.sqrt(n); i=i+2) {
+		if(n%i === 0) {
+			return false;
+		}
+		count ++;
+	}
+			
+	console.log(count);
+	return true;
+}
+
+function printPrime(num) {
+	for(var i = 0; i<=num; i++) {
+		if(isPrime(i)){
+			console.log(i);
+		}
+	}
+}
+
+console.log(printPrime(30));
+
+//console.log(isPrime(23));
+
 //===============//
 /* 18. Implement a function that returns the fibonacci number at a given index */
 //===============//
@@ -463,3 +496,5 @@ function fibonacci(index) {
     return fibonacci(index - 1) + fibonacci(index - 2);
 }
 console.log(fibonacci(10));
+
+
