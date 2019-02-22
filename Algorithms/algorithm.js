@@ -497,4 +497,16 @@ function fibonacci(index) {
 }
 console.log(fibonacci(10));
 
-
+// braces pattern 
+function stringOrder(str) {
+	var re = /([^\[\]\{\}\(\)])/g;
+	str = str.replace(re, "");
+	var reValid = /(\{\}|\(\)|\[\])/g; // {},(),[], ([{}]),[{()}],{[()]}, [{}], ([]), {()}
+	while(str.match(reValid)) {
+		str = str.replace(reValid, "");
+	}
+	console.log(str);
+	if(str==="")return true; 
+	else return false;
+}
+console.log(stringOrder("{([()])} {},(),[], ([{})]),[{()}],{[()]}[{}], ([]), {()}"));
