@@ -510,3 +510,36 @@ function stringOrder(str) {
 	else return false;
 }
 console.log(stringOrder("{([()])} {},(),[], ([{})]),[{()}],{[()]}[{}], ([]), {()}"));
+
+function sorting() {
+	var arr = [100, 180, 260, 720, 310, 40, 535, 695]; //5th-buy 7th-sell
+	var buy = 0;
+	var sell = 0;
+	var buyPos = 0;
+	var sellPos = 0;
+	var profit = -1;
+	var flag = true;
+	for(var i=0; i<arr.length-1; i++) {
+		sell = arr[i+1];
+		sellPos = i+1;
+		if(flag) {
+			buy = arr[i];
+			buyPos = i;
+		}
+		if(sell < buy) {
+			flag = true;
+			continue;
+		} 
+		else { 
+	      var temp_profit = sell - buy;
+	      if (temp_profit > profit) { 
+	      	profit = temp_profit; 
+	      }
+	      flag = false;
+    	}
+
+	}
+
+	return  buyPos +" : "+ buy +"  "+ sellPos +" : "+ sell;
+}
+console.log(sorting());
