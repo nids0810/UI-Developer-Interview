@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flipkart Table Configuration</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="main">
+	<div class="wrapper">
+
+		<div class="tableHeader">
+			<input type="text" name="searchbox" id="search" placeholder="Search"/>
+			<div class="showSelection">
+				<input type="checkbox" id="checkbox"/>
+				<span>Show Selected</span>
+			</div>
+		</div>
+		<div class="clear"></div>
+
+		<div class="table">
+			<div class="title">
+				<div class="key"><span>Key</span></div>
+				<div class="value"><span>Value</span></div>
+				<div class="description"><span>Description</span></div>
+			</div>
+			<div id="dataContainer"></div>
+		</div>
+	</div>
+
+	<div class="tablefooter">
+		<button id="done">Done</button>
+	</div>
+</div>
+	
+<script type="text/javascript" src="table.js"></script>
+</body>
+</html>
