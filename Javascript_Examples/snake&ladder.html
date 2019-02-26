@@ -8,18 +8,46 @@
 <body>
 <h1>Snake & Ladder Game</h1>
 <div id="main">
-<span id="curpos">0</span>
-	<button id="click" onclick="updateCurPos()">Click Me</button>
-	<div id="containerList"></div>
+	<span id="curpos">0</span>
+	<br>
+	<br>
+	<br>
+	<button id="play" onclick="updateCurPos()">Play!</button>
+	<button id="game-summary" onclick="gameSummary()">Game Summary!</button>
+	<button id="playAgain" onclick="playAgain()">Play Again?</button>
+	<br>
+	<br>
+	<br>
+	<span style="white-space: pre-line" id="summary"></span>
+	<!-- <pre id="summary"></pre> -->
 </div>
 
 <script>
-	var diceValue = 0;
+	var diceValue = 0; //dice value
+	
 	var curElement = document.getElementById('curpos');
+	var summaryElement = document.getElementById('summary');
+
+	var playButton = document.getElementById('play');
+	var summaryButton = document.getElementById('game-summary');
+	var playAgainButton = document.getElementById('playAgain');
+	
+	summaryButton.style.visibility = "hidden";
+	playAgainButton.style.visibility = "hidden"; //can be at other place?
+	
 	var curPos = curElement.innerHTML;
 	
 	var ladderObj = 
-    {"0":"0","1":"0","2":"0","3":"0","4":"35","5":"0","6":"0","7":"0","8":"26","9":"0","10":"29","11":"0","12":"0","13":"50","14":"0","15":"0","16":"0","17":"0","18":"45","19":"0","20":"60","21":"0","22":"44","23":"0","24":"0","25":"0","26":"0","27":"0","28":"0","29":"0","30":"0","31":"0","32":"0","33":"0","34":"0","35":"0","36":"0","37":"0","38":"0","39":"0","40":"0","41":"0","42":"0","43":"77","44":"0","45":"0","46":"0","47":"0","48":"0","49":"91","50":"0","51":"0","52":"0","53":"0","54":"0","55":"85","56":"0","57":"0","58":"0","59":"0","60":"0","61":"0","62":"96","63":"0","64":"36","65":"0","66":"87","67":"0","68":"0","69":"33","70":"0","71":"0","72":"0","73":"2","74":"0","75":"0","76":"0","77":"0","78":"0","79":"0","80":"99","81":"0","82":"0","83":"19","84":"0","85":"0","86":"0","87":"0","88":"0","89":"0","90":"0","91":"0","92":"51","93":"0","94":"0","95":"24","96":"0","97":"0","98":"28","99":"0","100":"100"}
+    {"0":"0","1":"0","2":"0","3":"0","4":"35","5":"0","6":"0","7":"0","8":"26","9":"0","10":"29","11":"0","12":"0","13":"50","14":"0","15":"0","16":"0","17":"0","18":"45","19":"0","20":"60","21":"0","22":"44","23":"0","24":"0","25":"0","26":"0","27":"0","28":"0","29":"0","30":"0","31":"0","32":"0","33":"0","34":"0","35":"0","36":"0","37":"0","38":"0","39":"0","40":"0","41":"0","42":"0","43":"77","44":"0","45":"0","46":"0","47":"0","48":"0","49":"91","50":"0","51":"0","52":"0","53":"0","54":"0","55":"85","56":"0","57":"0","58":"0","59":"0","60":"0","61":"0","62":"96","63":"0","64":"36","65":"0","66":"87","67":"0","68":"0","69":"33","70":"0","71":"0","72":"0","73":"2","74":"0","75":"0","76":"0","77":"0","78":"0","79":"0","80":"99","81":"0","82":"0","83":"19","84":"0","85":"0","86":"0","87":"0","88":"0","89":"0","90":"0","91":"0","92":"51","93":"0","94":"0","95":"24","96":"0","97":"0","98":"28","99":"0","100":"0"}
+
+    var gameDetails = {
+		'totalClick' : 0,
+		'tries' : 0,
+		'ladders' : 0,
+		'snakes' : 0,
+		'sixes' : 0,
+		'chances' : []
+	};
 	
 	function getDiceValue(){
 		var value = 0;
@@ -30,8 +58,8 @@
           //var random = 6;
           value = value + random;
           if(random == 6){
-
               count++;
+              gameDetails.sixes++;
           } else {
                   break; 
           }
@@ -46,45 +74,78 @@
 	
 	function updateCurPos(){
 		diceValue = getDiceValue();
+		gameDetails.totalClick++;
 		if(diceValue != ""){
         	if(curPos == 0 && parseInt(diceValue)<6){
-            	console.log('Try Again');
+            	console.log('Try Again\n');
+            	gameDetails.tries++;
+            	gameDetails.chances.push('Try Again');
             } else if(curPos == 0 && parseInt(diceValue)>6){
-            	curPos = findnewPost(curPos, parseInt(diceValue)-6);
-            } else if(curPos != 0) {
-            	curPos = findnewPost(curPos, parseInt(diceValue));
+            	curPos = findNewPos(curPos, parseInt(diceValue)-6);
+            } else if(curPos > 0 && curPos <= 100) {
+            	curPos = findNewPos(curPos, parseInt(diceValue));
+            } else {
+            	console.log('Error!');
             }
         }
         checkWinner(curPos);        
     }
     
-    function findnewPost(pos, dice){
-      var newPos = parseInt(pos) + parseInt(dice);
-      if(newPos < 100 && newPos > 0){
-        if(ladderObj[newPos] == 0){
-          console.log(pos + '+' + dice + '-->' + newPos);
-          pos = newPos;
+	function findNewPos(pos, dice){
+	  var newPos = parseInt(pos) + parseInt(dice);
+	  if(newPos <= 100 && newPos > 0){
+	    if(ladderObj[newPos] == 0){
+	      console.log(pos + '+' + dice + '-->' + newPos);
+	      gameDetails.chances.push(pos + '+' + dice + '-->' + newPos);
+	      pos = newPos;
 
-        } else {
-          console.log(curPos + '+' + dice + '-->' + ladderObj[newPos]);
-          pos = ladderObj[newPos];
-        }
-        return pos;
-      }
-    }
+	    } else {
+	      console.log(curPos + '+' + dice + '-->' + ladderObj[newPos] + '*');
+	      if(ladderObj[newPos] > curPos){
+	      	gameDetails.ladders++;
+	      } else {
+	      	gameDetails.snakes++;
+	      }
+	      gameDetails.chances.push(curPos + '+' + dice + '-->' + ladderObj[newPos] + '*');
+	      pos = ladderObj[newPos];
+	    }
+	  }
+	  return pos;
+	}
     
-function checkWinner(curPos) {
-  if(curPos == 100){
-	alert("Winner");
-  	curElement.innerHTML = 0;
-  } else {
-    curElement.innerHTML = curPos;
-  }
-}
+	function checkWinner(newCurPos) {
+	  if(newCurPos == 100){
+	  	curElement.innerHTML = "Congrats! you are the winner!";
+	  	playButton.style.visibility = "hidden";
+	  	summaryButton.style.visibility = "visible";
+	  	playAgainButton.style.visibility = "visible";
+	  } else {
+	    curElement.innerHTML = newCurPos;
+	  }
+	}
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
+	function playAgain() {
+	  curPos = 0;
+	  curElement.innerHTML = 0;
+	  summaryElement.innerHTML = "";
+	  summaryButton.style.visibility = "hidden";
+	  playAgainButton.style.visibility = "hidden";
+	  playButton.style.visibility = "visible";
+	}
+
+	function gameSummary() {
+	  curElement.innerHTML = 'Game Summary';
+	  summaryElement.innerHTML += 'The game was completed under '+ gameDetails.totalClick +' chance' + '\n';
+	  summaryElement.innerHTML += 'No of tries: ' + gameDetails.tries + '\n';
+	  summaryElement.innerHTML += 'No of Ladders Climbed: ' + gameDetails.ladders + '\n';
+	  summaryElement.innerHTML += 'No of snakes bites: ' + gameDetails.snakes + '\n';
+	  summaryElement.innerHTML += 'No of sixes: ' + gameDetails.sixes + '\n';
+	  summaryElement.innerHTML += gameDetails.chances + '\n';
+	}
+
+	function getRandomInt(max) {
+	  return Math.floor(Math.random() * Math.floor(max));
+	}
 
 </script>
 </body>
