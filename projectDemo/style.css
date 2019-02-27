@@ -1,0 +1,103 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Arial';
+	font-size: 16px;
+}
+
+#main {
+	width: 100%;
+}
+.wrapper {
+	width: 70%;
+	margin: 0 auto;
+}
+.clear {
+	clear: both;
+}
+.tableHeader {
+	width: 100%;
+	line-height: 100px;
+}
+#search {
+	width: 200px;
+	padding: 10px;
+}
+#search::placeholder {
+	font-size: 14px;
+}
+.showSelection {
+	float: right;
+}
+
+.showSelection span {
+	position: relative;
+	top: 1px;
+}
+.table {
+	border: 1px solid #ddd;
+	width: 100%;
+}
+.title {
+	width: 100%;
+	background: #ddd;
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+#dataContainer {
+	overflow: auto;
+    height: 469px;
+}
+.row {
+	padding: 20px;
+}
+.row:nth-child(odd) {
+	background: #f1f2f3;
+}
+.selectRow {
+	position: relative;
+    top: -3px;
+    right: 5px;
+}
+.key {
+	width: 28%;
+	display: inline-block;
+	margin-left: 15px;
+}
+.value {
+	width: 30%;
+	display: inline-block;
+}
+.value .selectBox {
+	width: 160px;
+	height: 27px;
+}
+.textType {
+	width: 150px;
+    padding: 5px;
+}
+.keyRow {
+	width: 29%;
+	display: inline-block;
+}
+.description {
+	width: 39%;
+	display: inline-block;
+}
+.tablefooter {
+	width: 100%;
+	border-top: 1px solid #ddd;
+    padding-top: 30px;
+    margin-top: 10px;
+}
+#done {
+	color: #fff;
+	font-size: 16px;
+	padding: 10px;
+	background: #3368FF;
+	border: 0;
+	border-radius: 3px;
+	float: right;
+	margin-right: 30px;
+}
+
