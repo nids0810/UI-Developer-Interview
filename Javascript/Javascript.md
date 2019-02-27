@@ -13,6 +13,7 @@
 
 ## Interview Questions ##
 * **https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
+* **https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions
 * **https://www.codementor.io/nihantanu/21-essential-javascript-tech-interview-practice-questions-answers-du107p62z?icn=post-3ey8yl7epg&ici=post-du107p62z
 * **https://www.onlineinterviewquestions.com/advanced-javascript-interview-questions/
 * **https://jharaphula.com/advanced-javascript-interview-questions-answers/
