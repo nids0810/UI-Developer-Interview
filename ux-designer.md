@@ -1,10 +1,11 @@
 
 ## Design Process ##
 
-## 1. User Research
+1. User Research
+  >> 
+  Create User Personas
+>> Mettings
 
-## 2. Usability Testing ##
-* https://medium.com/@sarahelson81/top-8-usability-testing-methods-7972902fab0b
 
 ## 3. Interaction Design ##
 * https://www.invisionapp.com/inside-design/validating-design-concepts/
@@ -16,6 +17,9 @@
 ## 6. UX Metrics ##
 
 ## 7. Content Strategy ##
+
+## 2. Usability Testing ##
+* https://medium.com/@sarahelson81/top-8-usability-testing-methods-7972902fab0b
 
 ## 8. Search Engine Optimization (SEO) ##
 
