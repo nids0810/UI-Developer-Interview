@@ -2,28 +2,24 @@
 ## Design Process ##
 
 1. User Research
-  >> 
-  Create User Personas
->> Mettings
+  > 
+  > Create User Personas
+  > Mettings
 
+2. 
+3. Interaction Design ##
+    * https://www.invisionapp.com/inside-design/validating-design-concepts/
+4. Visual Design
+5. Content Strategy ##
+6. UX Metrics ##
+7. Content Strategy ##
 
-## 3. Interaction Design ##
-* https://www.invisionapp.com/inside-design/validating-design-concepts/
-
-## 4. Visual Design ##
-
-## 5. Content Strategy ##
-
-## 6. UX Metrics ##
-
-## 7. Content Strategy ##
-
-## 2. Usability Testing ##
+## Usability Testing ##
 * https://medium.com/@sarahelson81/top-8-usability-testing-methods-7972902fab0b
 
-## 8. Search Engine Optimization (SEO) ##
+## Search Engine Optimization (SEO) ##
 
-## 9. Toools #
+## Tools #
 * https://www.uxbeginner.com/ux-tools/
 
 ## Interview Questions ##
@@ -34,4 +30,3 @@
 ## References: ##
 * The Ultimate List of UX Topics All Beginners Should Know: https://www.uxbeginner.com/ultimate-list-of-ux-topics-all-beginners-should-know/
 * THE ELEMENTS OF USER EXPERIENCE: http://www.jjg.net/elements/pdf/elements_ch02.pdf
-
