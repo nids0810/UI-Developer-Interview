@@ -543,3 +543,27 @@ function sorting() {
 	return  buyPos +" : "+ buy +"  "+ sellPos +" : "+ sell;
 }
 console.log(sorting());
+
+// Merge Sorting
+function merge(left, right) {
+	var result = [];
+  while(left.length && right.length) {
+  	if(left[0] < right[0]) {
+    	result.push(left.shift());
+    } else {
+    	result.push(right.shift());
+    }
+  }
+  return [...result, ...left, ...right];
+}
+
+function mergeSort(arr) {
+	if(arr.length === 1) {
+  	return arr;
+  }
+  var center = Math.floor(arr.length/2);
+  var left = arr.slice(0, center);
+  var right = arr.slice(center);
+  return merge(mergeSort(left), mergeSort(right));
+}
+console.log(mergeSort([1, -10, 5, 30, 0]));
