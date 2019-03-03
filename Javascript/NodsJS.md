@@ -101,6 +101,16 @@ module.exports = {
   "migrations": path.resolve('./server/migrations')
 };
 ```
+>> The sequelizerc file is going to bootstrap the application with the above paths.
+>> The config.json file is going to contain the configuration for the application. 
+>> The models path will contain the application models.
+>> The migrations path will contain the different migrations for the application.
+
+* pg: pg is a PostgreSQL client for Node.js, pg is responsible for creating our application’s database connection.
+* pg-hstore: pg-hstore is a node package for serializing and deserializing JSON data to hstore format.
+```
+npm install --save pg pg-hstore
+```
 ***************************************************************************************************************
 ## Popular FAQs ##
 * To install a new package for a particular project (run under the project folder)
