@@ -2,14 +2,19 @@
 Prerequiste: Install **node.js** [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 Create a new project folder **hello-world**
-```mkdir hello-world && cd hello-world```
+```
+mkdir hello-world && cd hello-world
+```
 
 Initiate a new Node application. Run this under the project folder
-```npm init```
+```
+npm init
+```
 
 Go through all the steps mentioned. This should create a *package.json* file. The file should look like this.
 
-```{
+```
+{
   "name": "hello-world",
   "version": "1.0.0",
   "description": "",
@@ -23,7 +28,9 @@ Go through all the steps mentioned. This should create a *package.json* file. Th
 ```
 
 Create an *index.js* file and open it to edit
-```touch index.js && nano index.js```
+```
+touch index.js && nano index.js
+```
 
 Add the following code in the file *hello-world/index.js*
 
@@ -42,7 +49,9 @@ server.listen(port, hostname, () => {
 ```
 
 To run the application, use the following command
-```node index.js```
+```
+node index.js
+```
 
 open [http://localhost:3000](http://localhost:3000) in a browser to see the words Hello World.
 
