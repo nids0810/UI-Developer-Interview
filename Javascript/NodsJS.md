@@ -56,6 +56,16 @@ node index.js
 open [http://localhost:3000](http://localhost:3000) in a browser to see the words Hello World.
 
 ***************************************************************************************************************
+## Popular NPM Packages ##
+* Typescript:
+```
+npm install typescript
+```
+* Express:
+```
+npm install Express
+```
+## Popular FAQs ##
 To install a new package for this project
 ```
 npm install package
@@ -79,17 +89,20 @@ npm list -g --depth=0
 > * list -g: display a tree of every package found in the user’s folders (without the -g option it only shows the current directory’s packages)
 > * depth 0 / — depth=0: avoid including every package’s dependencies in the tree view
 
-## Popular NPM Packages ##
-* Typescript:
+Use a class defined in an external js file e.g: *example.js* under the *main.js* file
+*example.js*
 ```
-npm install typescript
-```
-* Express:
-```
-npm install Express
-```
+class Example {
+  constructor(){
+    /* some code*/
+  }
+}
 
-
-
+module.export.Example Example
+```
+*main.js*
+```
+import { Example} from './example';
+```
 
 
