@@ -1,7 +1,7 @@
 # NodeJs #
 
 ## Build first node.js project ##
-Prerequiste: Install **node.js** [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+*Prerequisite* Install **node.js** [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 1. Create a new project folder **hello-world**
 ```
