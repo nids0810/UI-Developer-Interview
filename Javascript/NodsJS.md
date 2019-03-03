@@ -1,14 +1,15 @@
 
 https://codeburst.io/node-js-by-example-part-1-668376cd4f96
 
-It will install the npm package and allows to use globally.
-`npm install -g`
+Prerequiste: Install `node.js`
 
-Initiate a new Node application. Run this under an empty folder. 
+Create a new project folder `hello-world` 
+`mkdir hello-world && cd hello-world`
 
+Initiate a new Node application. Run this under the project folder
 `npm init`
 
-This should create a `package.json` file. The file should look like this.
+Go through all the steps mentioned. This should create a `package.json` file. The file should look like this.
 
 ```{
   "name": "hello-world",
@@ -23,11 +24,13 @@ This should create a `package.json` file. The file should look like this.
 }
 ```
 
-Create an `index.js` file, and add the following code
+Create an `index.js` file and open it to edit
+`touch index.js && nano index.js`
 
-`hello-world/index.js`
+Add the following code in the file `hello-world/index.js`
 
-```const http = require('http');
+```
+const http = require('http');
 const hostname = '127.0.0.1';
 const port = 3000;
 const server = http.createServer((req, res) => {
@@ -45,34 +48,23 @@ To run the application, use the following command
 
 open [http://localhost:3000](http://localhost:3000) in a browser to see the words Hello World.
 
-To install the corresponding package and save it in node modules and list an entry in dependencies in package.jason file.
+***************************************************************************************************************
+To install a new package for this project
+`npm install package`
+
+To install a new package and save an entry in dependencies in package.json file.
 `npm install package -- save`
 
+To install the a new package globally allows to use every where
+`npm install -g package`
+
+To list all the installed package globally
+`npm list -g --depth=0`
+
+> list -g: display a tree of every package found in the user’s folders (without the -g option it only shows the current directory’s packages)
+> depth 0 / — depth=0: avoid including every package’s dependencies in the tree view
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Commands
-* npm install
-* npm install grunt
-* bower install
-* grunt buildprod
-* grunt builddev
-
-*During the installation of bower, may show the error unable to connect to GitHub. Enter the cmd bower install again in same command prompt.
 
