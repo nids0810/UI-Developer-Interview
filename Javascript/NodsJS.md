@@ -67,7 +67,7 @@ npm install typescript
 ```
 npm install Express
 ```
-*body-parser: body-parser parses incoming request bodies in a middleware before your handlers, available under the req.bodyproperty
+* body-parser: body-parser parses incoming request bodies in a middleware before your handlers, available under the req.bodyproperty
 ```
 npm install body-parser --save
 ```
@@ -80,6 +80,11 @@ npm install nodemon --save-dev
 ```
 npm install babel-cli --save
 ```
+>> To configure Babel for the project, create a new file called .sequelizerc in the app root using `$ touch .babelrc` and update the following content in the file
+>> {
+>>   "presets": ["es2015"]
+>> }
+
 * Sequelize: Sequelize is an ORM for Nodejs, it supports PostgreSQL, MySQL, SQLite and MSSQL
 ```
 npm install -save sequelize-cli
