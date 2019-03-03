@@ -67,6 +67,35 @@ npm install typescript
 ```
 npm install Express
 ```
+*body-parser: body-parser parses incoming request bodies in a middleware before your handlers, available under the req.bodyproperty
+```
+npm install body-parser --save
+```
+
+* Nodeman: Nodemon watches your app for file changes and restarts the server every time a file changes in your app. This eases your work because you won’t have to start and restart the server manually every time you change files in your app
+```
+npm install nodemon --save-dev
+```
+* Babel: Babel helps to turn our codes from ES6 to ES5.
+```
+npm install babel-cli --save
+```
+* Sequelize: Sequelize is an ORM for Nodejs, it supports PostgreSQL, MySQL, SQLite and MSSQL
+```
+npm install -save sequelize-cli
+```
+>> To configure Sequelize for our project we are going to create a .sequelizerc file in the root of our app
+>> `$ touch .sequelizerc`
+>> inside the file type the following
+```
+const path = require('path');
+
+module.exports = {
+  "config": path.resolve('./server/config', 'config.json'),
+  "models": path.resolve('./server/models'),
+  "migrations": path.resolve('./server/migrations')
+};
+```
 ***************************************************************************************************************
 ## Popular FAQs ##
 * To install a new package for a particular project (run under the project folder)
@@ -107,3 +136,14 @@ module.export.Example Example
 ```
 import { Example} from './example';
 ```
+* To always run the node application with specific parameters
+Add following the in package.json file
+```
+"start": "nodemon app.js --exec babel-node --"
+```
+Use the following command to start node app
+```
+npm run start
+```
+
+
