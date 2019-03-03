@@ -57,19 +57,27 @@ open [http://localhost:3000](http://localhost:3000) in a browser to see the word
 
 ***************************************************************************************************************
 To install a new package for this project
-```npm install package```
+```
+npm install package
+```
 
 To install a new package and save an entry in dependencies in package.json file.
-```npm install package -- save```
+```
+npm install package -- save
+```
 
 To install the a new package globally allows to use every where
-```npm install -g package```
+```
+npm install -g package
+```
 
 To list all the installed package globally
-```npm list -g --depth=0```
+```
+npm list -g --depth=0
+```
 
-> list -g: display a tree of every package found in the user’s folders (without the -g option it only shows the current directory’s packages)
-> depth 0 / — depth=0: avoid including every package’s dependencies in the tree view
+> * list -g: display a tree of every package found in the user’s folders (without the -g option it only shows the current directory’s packages)
+> * depth 0 / — depth=0: avoid including every package’s dependencies in the tree view
 
 
 
