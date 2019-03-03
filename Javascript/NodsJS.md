@@ -1,17 +1,19 @@
 # NodeJs #
+
+## Build first node.js project ##
 Prerequiste: Install **node.js** [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
-Create a new project folder **hello-world**
+1. Create a new project folder **hello-world**
 ```
 mkdir hello-world && cd hello-world
 ```
 
-Initiate a new Node application. Run this under the project folder
+2. Initiate a new Node application. Run this under the project folder
 ```
 npm init
 ```
 
-Go through all the steps mentioned. This should create a *package.json* file. The file should look like this.
+3. Go through all the steps mentioned. This should create a *package.json* file. The file should look like this.
 
 ```
 {
@@ -27,12 +29,12 @@ Go through all the steps mentioned. This should create a *package.json* file. Th
 }
 ```
 
-Create an *index.js* file and open it to edit
+4. Create an *index.js* file and open it to edit
 ```
 touch index.js && nano index.js
 ```
 
-Add the following code in the file *hello-world/index.js*
+5. Add the following code in the file *hello-world/index.js*
 
 ```
 const http = require('http');
@@ -48,12 +50,12 @@ server.listen(port, hostname, () => {
 });
 ```
 
-To run the application, use the following command
+6. Run the application using the following command
 ```
 node index.js
 ```
 
-open [http://localhost:3000](http://localhost:3000) in a browser to see the words Hello World.
+7. open [http://localhost:3000](http://localhost:3000) in a browser to see the words Hello World.
 
 ***************************************************************************************************************
 ## Popular NPM Packages ##
@@ -65,6 +67,7 @@ npm install typescript
 ```
 npm install Express
 ```
+***************************************************************************************************************
 ## Popular FAQs ##
 * To install a new package for a particular project (run under the project folder)
 ```
@@ -104,5 +107,3 @@ module.export.Example Example
 ```
 import { Example} from './example';
 ```
-
-
