@@ -1,13 +1,13 @@
 # NodeJs #
-Prerequiste: Install `node.js` [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+Prerequiste: Install **node.js** [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
-Create a new project folder `hello-world` 
+Create a new project folder **hello-world**
 `mkdir hello-world && cd hello-world`
 
 Initiate a new Node application. Run this under the project folder
 `npm init`
 
-Go through all the steps mentioned. This should create a `package.json` file. The file should look like this.
+Go through all the steps mentioned. This should create a *package.json* file. The file should look like this.
 
 ```{
   "name": "hello-world",
@@ -22,10 +22,10 @@ Go through all the steps mentioned. This should create a `package.json` file. Th
 }
 ```
 
-Create an `index.js` file and open it to edit
+Create an *index.js* file and open it to edit
 `touch index.js && nano index.js`
 
-Add the following code in the file `hello-world/index.js`
+Add the following code in the file *hello-world/index.js*
 
 ```
 const http = require('http');
