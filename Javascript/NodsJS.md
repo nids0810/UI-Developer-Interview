@@ -1,7 +1,5 @@
-
-https://codeburst.io/node-js-by-example-part-1-668376cd4f96
-
-Prerequiste: Install `node.js`
+# NodeJs #
+Prerequiste: Install `node.js` [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 Create a new project folder `hello-world` 
 `mkdir hello-world && cd hello-world`
