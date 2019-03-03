@@ -80,18 +80,18 @@ npm install nodemon --save-dev
 ```
 npm install babel-cli --save
 ```
->> To configure Babel for the project, create a new file called .sequelizerc in the app root using `$ touch .babelrc` and update the following content in the file
->> {
->>   "presets": ["es2015"]
->> }
+>> To configure Babel for the project, create a new file called .babelrc in the app root using `$ touch .babelrc` and update the following content in the file
+```
+{
+  "presets": ["es2015"]
+}
+```
 
 * Sequelize: Sequelize is an ORM for Nodejs, it supports PostgreSQL, MySQL, SQLite and MSSQL
 ```
 npm install -save sequelize-cli
 ```
->> To configure Sequelize for our project we are going to create a .sequelizerc file in the root of our app
->> `$ touch .sequelizerc`
->> inside the file type the following
+>> To configure Sequelize for the project, create a new file called .sequelizerc in the app root using `$ touch .babelrc` and update the following content in the file.
 ```
 const path = require('path');
 
