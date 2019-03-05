@@ -567,3 +567,33 @@ function mergeSort(arr) {
   return merge(mergeSort(left), mergeSort(right));
 }
 console.log(mergeSort([1, -10, 5, 30, 0]));
+
+//merge two sorted array
+var a = [1,2,3,4,5,6,7];
+    var b = [4,11];
+
+    function merge(a, b) {
+     var arr = [];
+
+     while(a.length != 0 && b.length !=0) {
+       if(a[0] < b[0]) {
+         arr.push(a.shift());
+       } else {
+         arr.push(b.shift());
+       }
+     }
+
+     if(a.length !=0) {
+       while(a.length!=0) {
+         arr.push(a.shift());
+       }
+     }
+     else {
+       while(b.length!=0) {
+         arr.push(b.shift());
+       }
+     }
+     return arr;
+   }
+
+   console.log(merge(a,b));
