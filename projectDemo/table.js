@@ -146,7 +146,7 @@ function selectEntireRow() {
 			}
 		}
 		var mainOBJ = {'config' : createDataArr};
-		console.log(mainOBJ);
+		console.log(mainOBJ); // object sending
 	}
 
 
