@@ -6,7 +6,8 @@
             scope: {
                 config: '=',
                 title: '@',
-                onsubmit: '&'
+                onsubmit: '&',
+                resultObject: '='
             },
             templateUrl: 'items.html'
         };
@@ -17,6 +18,10 @@
         $http.get('data.json').then(function (flextData) {
             $scope.flexiConfig = flextData.data.items;
         });
+
+        $scope.result = {
+            name: 'Nidhi Singh'
+        };
 
         $scope.onFlexiSubmit = function (item) {
             console.log('here');

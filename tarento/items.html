@@ -3,7 +3,7 @@
 <div ng-repeat="item in config" class="main">
   <div ng-if="item.type === 'TextField'" class="inputBlock">
     <label>{{item.label}}</label><br>
-    <input id="inputBox" type="text" name="{{item.name}}" ng-model="personName" placeholder="enter name" required>
+    <input id="inputBox" type="text" name="{{item.name}}" ng-model="resultObject.name" placeholder="enter name" required>
   </div>
   <div ng-if="item.type === 'DropDown'" class="selectBlock">
     <label>{{item.label}}</label><br>
@@ -13,3 +13,5 @@
   </div>
 </div>
 <button id="button" ng-click="onsubmit()">Submit</button>
+
+<div class="response">{{resultObject}}</div>

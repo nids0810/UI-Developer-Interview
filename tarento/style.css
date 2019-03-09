@@ -46,3 +46,12 @@ label {
 #button:active {
     background: #0c3c6d
 }
+.response {
+    width: 250px;
+    border: 1px solid #ccc;
+    background: #eee;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
