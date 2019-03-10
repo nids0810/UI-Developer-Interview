@@ -7,11 +7,14 @@
   </div>
   <div ng-if="item.type === 'DropDown'" class="selectBlock">
     <label>{{item.label}}</label><br>
-    <select id="selectBox" ng-model="stateName" name="{{item.name}}">
+    <select id="selectBox" ng-model="resultObject.state" name="{{item.name}}">
       <option ng-repeat="option in item.values" value="{{option}}">{{option}}</option>
     </select>
   </div>
 </div>
 <button id="button" ng-click="onsubmit()">Submit</button>
 
-<div class="response">{{resultObject}}</div>
+<div id="response">
+  <span  ng-bind="'Name: ' + resultObject.name"></span><br>
+  <span  ng-bind="'State: ' + resultObject.state"></span>
+</div>

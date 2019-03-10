@@ -46,7 +46,8 @@ label {
 #button:active {
     background: #0c3c6d
 }
-.response {
+#response {
+    display: none;
     width: 250px;
     border: 1px solid #ccc;
     background: #eee;
@@ -54,4 +55,5 @@ label {
     padding: 10px;
     border-radius: 3px;
     font-size: 14px;
+    line-height: 20px;
 }
