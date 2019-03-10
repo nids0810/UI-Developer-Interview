@@ -1,0 +1,19 @@
+{{config}}
+
+
+<div ng-repeat="item in config" class="main" ng-controller="flexiController">
+    <!-- display text box -->
+    <div ng-if="item.type === 'TextField'" class="inputBlock">
+      <label>{{item.label}}</label><br>
+      <input class="inputBox" type="text" name="{{item.name}}" placeholder="enter name"
+        required>
+    </div>
+    <!-- display select box -->
+    <div ng-if="item.type === 'DropDown'" class="selectBlock">
+      <label>{{item.label}}</label><br>
+      <select class="selectBox" name="{{item.name}}">
+        <option ng-repeat="option in item.values" value="{{option}}">{{option}}</option>
+      </select>
+    </div>
+</div>
+<button id="button" ng-click="onFlexiSubmit()">Submit</button>

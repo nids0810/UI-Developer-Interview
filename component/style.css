@@ -1,0 +1,62 @@
+body {
+    font-size: 16px;
+    background: #fff;
+    font-family: sans-serif;
+    padding: 0 40px;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+}
+label {
+    font-size: 13px;
+}
+.inputBlock {
+    margin-top: 20px;
+}
+.inputBox, .selectBox {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    width: 250px;
+}
+.selectBlock {
+    margin-top: 20px;
+}
+.selectBox {
+    width: 270px;
+    height: 39px;
+}
+#button {
+    background: #3368FF;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#button:focus {
+    outline: 0;
+}
+#button:active {
+    background: #0c3c6d
+}
+#response {
+    display: none;
+    width: 400px;
+    border: 1px solid #ccc;
+    background: #eee;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+h3 {
+    margin: 0;
+}

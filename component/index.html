@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+		<title>Tarento</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div ng-controller="appController">
+			<h2>User Detail:</h2>
+			<hr>
+			<!--Flexi config component-->
+            <flexi config="flexiConfig" on-submit-handler="onSubmitHandler(result)"></flexi>
+            {{flexiConfig}}
+			<!--User response -->
+			<div id="response">
+				<h3>Response Object</h3>
+				<pre>{{response | json}}</pre>
+			</div>
+        </div>
+
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="flex/items-directive.js"></script>
+        <script type="text/javascript" src="flex/items-controller.js"></script>
+	</body>
+</html>
