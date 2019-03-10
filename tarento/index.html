@@ -9,7 +9,15 @@
 	</head>
 	<body>
 		<div ng-controller="flexiController">
-            <flexi config="flexiConfig" title="Person Detail" onsubmit="onFlexiSubmit()" result-object="result"></flexi>
+			<h2>User Detail:</h2>
+			<hr>
+			<!--Flexi config component-->
+			<flexi config="flexiConfig" onsubmit="onFlexiSubmit()" result-object="result"></flexi>
+			<!--User response -->
+			<div id="response">
+				<h3>Response Object</h3>
+				<pre>{{result | json}}</pre>
+			</div>
         </div>
 
 		<script type="text/javascript" src="script.js"></script>

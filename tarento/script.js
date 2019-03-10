@@ -24,11 +24,11 @@
         $scope.onFlexiSubmit = function () {
             document.getElementById('response').style.display = 'block';
             $scope.personName = document.getElementById('inputBox').value;
-            $scope.result.name = $scope.personName;
+            $scope.result.personname = $scope.personName;
             
             $scope.selectedState = document.getElementById('selectBox');
             $scope.stateName = $scope.selectedState.options[$scope.selectedState.selectedIndex].value;
-            $scope.result.state = $scope.stateName;
+            $scope.result.states = $scope.stateName;
         };
 
     }]);
