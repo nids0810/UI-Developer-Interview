@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find Lyrics</title>
+</head>
+<body>
+
+<div id="demo">
+<h1>Zomato</h1>
+<button type="button" onclick="findCategories()">Find Categories</button>
+<br>
+<br>
+<input type="text" id="city_name">
+<button type="button" onclick="findCityDetails()">Find City</button>
+<p id="error_results"></p>
+
+</div>
+
+<script>
+
+var my_user_key = '5aa0275d0ee519b8d923a3686e456aa5'; //https://developers.zomato.com/documentation#/
+
+function findCategories(){
+
+	const Url = 'https://developers.zomato.com/api/v2.1/categories';
+
+	var request = new Request(Url, { 	//URL
+		method: 'GET',					//Method
+		headers: new Headers({			//Header
+			'Accept':'application/json',
+			'user-key': my_user_key		//request.headers.get('Accept')
+		})
+	})
+
+	fetch(request)
+	.then(function(response){
+		if(response.ok){
+			return response.json();
+		}
+
+		throw new Error('API Error '+response.statusText);
+	})
+	.then(function(myJson){
+		console.log(myJson);
+	})
+	.catch(function(error){
+		console.log(error.message);	
+	});
+
+}
+
+
+function findCityDetails() {
+
+	const Url = 'https://developers.zomato.com/api/v2.1/cities';
+	var city_name = document.getElementById("city_name").value; //Bangalore
+
+	if(city_name != ""){
+		var queryUrl = (Url + "?q=" + city_name);
+		//console.log(queryUrl);
+
+		var request = new Request(queryUrl, {
+			method: 'GET', 
+			headers: new Headers({
+				'user-key': my_user_key			
+			})
+		});
+
+		fetch(request)
+        .then(function(response) {
+		      if(response.ok) {
+  				  return response.json();
+			  }
+
+			throw new Error('API Error '+response.statusText);
+		  })
+		 .then(function(myJson) {
+			console.log(myJson);
+		  })
+		 .catch(function(error) {
+  			console.log(error.message);
+		});
+	} else {
+		console.log("City Name is empty");
+	}
+
+}
+
+/*function findlocationDetails() {
+
+	const Url = 'https://developers.zomato.com/api/v2.1/locations?query='; // https://developers.zomato.com/api/v2.1/locations?query=Bangalore;
+		var locality_name = document.getElementById("locality_name"); //Bangalore
+
+	if(locality_name.value != ""){
+		var queryUrl = (Url + locality_name.value);
+		console.log(queryUrl);
+
+		var locationRequest = new Request(queryUrl, {
+			method: 'GET', 
+			headers: new Headers({
+				'user-key': my_user_key
+			})
+		});
+
+		console.log(locationRequest);
+
+		fetch(locationRequest)
+        .then(function(response) {
+		      if(response.ok) {
+  				  return response.json();
+			  }
+			  throw new Error('throw this error message');
+		  })
+		 .then(function(myJson) {
+		 	//console.log(myJson);
+			console.log(JSON.stringify(myJson));
+		  })
+		// .catch(error=>console.log(error));
+		 .catch(function(error) {
+  			console.log('There has been a problem with your fetch operation: ', error.message);
+		});
+	}
+
+}*/
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find Lyrics</title>
+</head>
+
+<body>
+<div id="demo">
+	<h1>Find Lyrics</h1>
+	<p>Enter Artist Name:</p>
+	<input type="text" id="song_artist">
+	<p>Enter Song Title:</p>
+	<input type="text" id="song_title">
+	<button type="button" onclick="findLyrics()">Find Lyrics</button>
+	<button type="button" onclick="resetAll()">Reset</button>
+	<p id="error_results"></p>
+	<div>
+		<b><p id="song_details"></p></b>
+		<p id="song_lyrics"></p>
+	</div>
+</div>
+
+<script>
+function findLyrics() {
+	const Url = 'https://api.lyrics.ovh/v1/'; //https://api.lyrics.ovh/v1/:artist/:title
+	var input_artist = document.getElementById("song_artist"); //Ariana Grande
+	var input_title = document.getElementById("song_title"); //thank u, next
+
+	resetTags();
+
+	if(input_artist.value != "" && input_title.value != ""){
+		var queryUrl = (Url + input_artist.value + "/" + input_title.value);
+		console.log(queryUrl);
+
+		fetch(queryUrl)
+		 .then(function(response) {
+		      if(response.ok) {
+  				  return response.json();
+			  }
+			  throw new Error('API Error'+response.statusText);
+		  })
+		 .then(function(myJson) {
+			document.getElementById('song_details').innerHTML = (input_artist.value + " - " + input_title.value).toUpperCase();
+		    document.getElementById('song_lyrics').innerHTML = myJson.lyrics.replace(/\n/g, "<br />");
+		  })
+		 .catch(function(error) {
+  			//console.log('There has been a problem with your fetch operation: ', error.message);
+  			document.getElementById('error_results').innerHTML = error.message;
+		});
+	} else if (input_artist.value == "") {
+		document.getElementById('error_results').innerHTML = "Artist Name Empty";
+	} else {
+		document.getElementById('error_results').innerHTML = "Title Name Empty";
+	}
+}
+
+function resetTags() {
+	document.getElementById('song_details').innerHTML = "";
+	document.getElementById('song_lyrics').innerHTML = "";
+	document.getElementById('error_results').innerHTML = "";
+}
+
+function resetAll() {
+	document.getElementById("song_artist").value = "";
+	document.getElementById("song_title").value = "";
+	document.getElementById('song_details').innerHTML = "";
+	document.getElementById('song_lyrics').innerHTML = "";
+	document.getElementById('error_results').innerHTML = "";
+}
+
+</script>
+
+</body>
+</html>

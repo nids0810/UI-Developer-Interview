@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+	<h1>Bank Details</h1>
+	<p>Enter IFSC Code: </p>
+	<input type="text" id="ifsc_code" placeholder="Enter IFSC Code">
+	<button type="button" onclick="findBankDetails()">Find Details</button>
+	<p id="error_results"></p>
+	<div>
+		<table>
+			<tr><td>Bank:</td><td><p id="bank"></p></td></tr>
+			<tr><td>IFSC:</td><td><p id="ifsc"></p></td></tr>
+			<tr><td>BankCode:</td><td><p id="bankcode"></p></td></tr>
+			<tr><td>Branch:</td><td><p id="branch"></p></td></tr>
+			<tr><td>Address:</td><td><p id="address"></p></td></tr>
+			<tr><td>Contact:</td><td><p id="contact"></p></td></tr>
+			<tr><td>City:</td><td><p id="city"></p></td></tr>
+			<tr><td>District:</td><td><p id="district"></p></td></tr>
+			<tr><td>State:</td><td><p id="state"></p></td></tr>
+		</table>
+	</div>
+</div>
+
+<script>
+function findBankDetails() {
+	const Url = 'https://ifsc.razorpay.com/';
+	var input_ifsc = document.getElementById("ifsc_code").value; //KARB0000001
+	resetTags();
+
+	if(input_ifsc != ""){
+		var queryUrl = (Url+input_ifsc);
+
+		fetch(queryUrl)
+		 .then(function(response) {
+		      if(response.ok) {
+  				  return response.json();
+			  }
+			  throw new Error('API Error: ' + response.statusText);
+		  })
+		 .then(function(myJson) {
+	 	    //console.log(JSON.stringify(myJson));
+		    document.getElementById('bank').innerHTML = myJson.BANK;
+		    document.getElementById('ifsc').innerHTML = myJson.IFSC;
+		    document.getElementById('bankcode').innerHTML = myJson.BANKCODE;
+		    document.getElementById('branch').innerHTML = myJson.BRANCH;
+		    document.getElementById('address').innerHTML = myJson.ADDRESS;
+		    document.getElementById('contact').innerHTML = myJson.CONTACT;
+		    document.getElementById('city').innerHTML = myJson.CITY;
+		    document.getElementById('district').innerHTML = myJson.DISTRICT;
+		    document.getElementById('state').innerHTML = myJson.STATE;
+		  })
+		 .catch(function(error) {
+  			//console.log('There has been a problem with your fetch operation: ', error.message);
+  			document.getElementById('error_results').innerHTML = error.message;
+		});
+	} else {
+		document.getElementById('error_results').innerHTML = "IFSC Input is empty";
+	}
+}
+
+function resetTags() {
+	document.getElementById('error_results').innerHTML = "";
+	document.getElementById('bank').innerHTML = "";
+    document.getElementById('ifsc').innerHTML = "";
+    document.getElementById('bankcode').innerHTML = "";
+    document.getElementById('branch').innerHTML = "";
+    document.getElementById('address').innerHTML = "";
+    document.getElementById('contact').innerHTML = "";
+    document.getElementById('city').innerHTML = "";
+    document.getElementById('district').innerHTML = "";
+    document.getElementById('state').innerHTML = "";
+}
+
+</script>
+
+</body>
+</html>
