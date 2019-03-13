@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<title>Find Shortest String</title>
+</head>
+<body>
+  <label>Item 1: <input type="text" id="item1" required></label><br>
+  <label>Item 2: <input type="text" id="item2" required></label><br>
+  <label>String: <br><textarea rows="15" cols="50" id="str"></textarea></label>
+  <br>
+  <br>
+  <button type="button" id="sp">Shortest Path</button>
+  <br>
+  <p id="results"></p>
+
+<script type="text/javascript">
+  const inputItem1 = document.getElementById('item1');
+  const inputItem2 = document.getElementById('item2');
+  const inputStr = document.getElementById('str');
+  const buttonSP = document.getElementById('sp');
+  const eleResults = document.getElementById('results');
+
+  window.onload = function(e){ 
+    inputItem1.defaultValue = "Viplove";
+    inputItem2.defaultValue = "Prakash"; 
+    inputStr.defaultValue = `Viplove After Prakash \nViplove reviewing and Prakash \nViplove discussing in great Prakash with my DSM, Ryan Pokorzynski \nViplove Prakash \nViplove Ground/HD. we can provide a spreadsheet Prakash \nViplove hey did nearly 15,000 pkgs in February with UPS. Prakash \nViplove to secure a portion of their business (which could amount to upwards of \$500 Prakash \nViplove in order for us Prakash.`;
+  }
+
+  function shortestString (item1, item2, str) {
+
+    if(str.includes(item1 + ' ' + item2)){
+      return item1 + ' ' + item2;
+    }
+
+    //Match excluding item1 and item2
+    //const regex = new RegExp('(?<='+item1+'\\s+).*?(?=\\s+'+item2+')', "gm");
+    //const regex = /(?<=Viplove\s+).*?(?=\s+Prakash)/gm;
+
+    //Match including item1 and item2
+    const regex = new RegExp('(?:'+item1+'\\s+).*?(?:\\s+'+item2+')', "gm");
+    //const regex = /(?:Viplove\s+).*?(?:\s+Prakash)/gm;
+
+    //const str = `Viplove After Prakash Viplove reviewing and Prakash Viplove discussing in great Prakash with my DSM, Ryan Pokorzynski Viplove Prakash Viplove Ground/HD. we can provide a spreadsheet Prakash Viplove hey did nearly 15,000 pkgs in February with UPS. Prakash Viplove to secure a portion of their business (which could amount to upwards of \$500 Prakash Viplove in order for us Prakash `;
+
+    let m;
+
+    var matches = [];
+
+    while ((m = regex.exec(str)) !== null) {
+        // This is necessary to avoid infinite loops with zero-width matches
+        if(m.index === regex.lastIndex) {
+            regex.lastIndex++;
+        }
+
+        // The result can be accessed through the `m`-variable.
+        m.forEach((match, groupIndex) => {
+      matches.push(match);
+            console.log(`Found match, group ${groupIndex}: ${match}`);
+        });
+    }
+
+    var minLength;
+    var minValue = "";
+    for(match of matches){
+      if( minLength === undefined ||  minLength > match.length){
+        minLength = match.length;
+        minValue = match;
+      }
+    }
+
+    return minValue;
+  }
+
+  buttonSP.addEventListener("click", function(){
+    console.log(shortestString(inputItem1.value, inputItem2.value, inputStr.value)); 
+    eleResults.innerHTML = shortestString(inputItem1.value, inputItem2.value, inputStr.value);
+  });
+
+</script>
+</body>
+</html>
+</html>
