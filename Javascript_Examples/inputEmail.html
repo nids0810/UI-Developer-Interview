@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Text field</h2>
+
+    <input type="email" name="email" id="email">
+    <br><br>
+    <button id="submit" onclick="submitEmail()">submit</button>
+    <button id="edit" onclick="editEmail()">Edit</button>
+    <button id="delete" onclick="deleteEmail()">Delete</button>
+
+    <p id="results"></p>
+
+    <script>
+        var eleEmail = document.getElementById("email");
+        var eleResults = document.getElementById("results");
+
+        function submitEmail() {
+            // Store
+            var at = document.getElementById("email").value.indexOf("@");
+
+            if (at == -1) {
+                alert("Not a valid e-mail!");
+            } else {
+                localStorage.setItem("email", eleEmail.value);
+                eleResults.innerHTML = eleEmail.value + " item added";
+            }
+
+        }
+
+        function editEmail() {
+            // Store
+            if (localStorage.getItem("email") !== null) {
+                localStorage.removeItem("email");
+                localStorage.setItem("email", eleEmail.value);
+                eleResults.innerHTML = eleEmail.value + " item updated";
+            } else {
+                localStorage.setItem("email", eleEmail.value);
+                eleResults.innerHTML = eleEmail.value + " item added";
+            }
+        }
+
+        function deleteEmail() {
+            // Store
+            if (localStorage.getItem("email") !== null) {
+                localStorage.removeItem("email");
+                eleResults.innerHTML = "Item deleted";
+            } else {
+                eleResults.innerHTML = "Item not found";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
