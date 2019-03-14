@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to sort the array in descending order.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var points = ['a', 'ab', 'bc', 'abc', 'cx', 'abcd'];
+document.getElementById("demo").innerHTML = points;
+
+function myFunction() {
+  points.sort(function(a, b){return a.length -b.length});
+  //points.sort();
+  document.getElementById("demo").innerHTML = points;
+}
+</script>
+
+</body>
+</html>
