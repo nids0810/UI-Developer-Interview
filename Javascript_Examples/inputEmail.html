@@ -31,16 +31,24 @@
         }
 
         function editEmail() {
-            // Store
-            if (localStorage.getItem("email") !== null) {
-                localStorage.removeItem("email");
-                localStorage.setItem("email", eleEmail.value);
-                eleResults.innerHTML = eleEmail.value + " item updated";
-            } else {
-                localStorage.setItem("email", eleEmail.value);
-                eleResults.innerHTML = eleEmail.value + " item added";
-            }
-        }
+           // Store
+
+           var at = document.getElementById("email").value.indexOf("@");
+
+           if (at == -1) {
+               alert("Not a valid e-mail!");
+           } else {
+
+               if (localStorage.getItem("email") !== null) {
+                   localStorage.removeItem("email");
+                   localStorage.setItem("email", eleEmail.value);
+                   eleResults.innerHTML = eleEmail.value + " item updated";
+               } else {
+                   localStorage.setItem("email", eleEmail.value);
+                   eleResults.innerHTML = eleEmail.value + " item added";
+               }
+           }
+       }
 
         function deleteEmail() {
             // Store
