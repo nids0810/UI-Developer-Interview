@@ -597,3 +597,24 @@ var a = [1,2,3,4,5,6,7];
    }
 
    console.log(merge(a,b));
+
+//Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+var twoSum = function(nums, target) {
+    var obj = {};
+    for(var item of nums) {
+        obj[item] = true;
+    }
+    for(var item in obj) {
+        item = parseInt(item);
+        var diff = target - item;
+        if(obj[diff]) {
+            if(diff > item) {
+              return [nums.indexOf(item), nums.indexOf(diff)];
+            } else if(diff === item) {
+              return [nums.indexOf(diff), nums.indexOf(diff, nums.indexOf(diff)+1)];
+            } else {
+              return [nums.indexOf(diff), nums.indexOf(item)];
+            }
+        }
+    }
+};
