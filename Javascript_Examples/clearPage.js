@@ -1,4 +1,4 @@
-//savedlinks.js
+/**************************savedlinks.js************************/
 "use strict";
 
 (function () {
@@ -153,7 +153,7 @@
   };
 })();
 
-//savedlinks.css
+/************************** savedlinks.css ************************/
 body {
     display: inline;
 }
@@ -250,7 +250,7 @@ body {
     text-decoration: underline;
 }
 
-//savedlinks.html
+/************************** savedlinks.html ************************/
 <!DOCTYPE html>
 <html>
 <head>
