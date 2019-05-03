@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>News Reader</title>
+    </head>
+    <body>
+        <div id="main"></div>
+        <script>
+
+        // Module one output
+        var feed = "Obama visited Facebook headquarters: http://bit.ly/xyz @elversatile";
+
+        // Module Two
+        function extractFeedInfo(feed) {
+            return feed.split(" ");
+        }
+        
+        var feedOutput = extractFeedInfo(feed);
+
+        var mainDiv = document.getElementById("main");
+        // Module three
+        function formattedText(output) {
+            for(var item of output) {
+                if(item === "http://bit.ly/xyz") {
+                    var a = document.createElement('a');
+                    a.setAttribute("href", item);
+                    a.textContent = item;
+                    mainDiv.appendChild(a);
+                } else if(item.includes('@')) {
+                    var username = item.slice(1);
+                    var a = document.createElement('a');
+                    a.setAttribute("href", "http://twitter.com/" + username);
+                    a.textContent = username
+                    mainDiv.appendChild(a);
+                } else if(item[0] === item[0].toUpperCase()) {
+                    var strong = document.createElement('strong');
+                    strong.textContent = item;
+                    mainDiv.appendChild(strong);
+                } else {
+                    mainDiv.innerHTML += item;
+                }
+            }
+        }
+
+        formattedText(feedOutput);
+        
+        </script>
+    </body>
+</html>
