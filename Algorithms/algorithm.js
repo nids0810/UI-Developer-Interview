@@ -310,6 +310,22 @@ function removeDuplicates(names) {
 }
 console.log(removeDuplicates(['John', 'Paul', 'George', 'Ringo', 'John']));
 
+// maintained object and serialization
+
+var arr = [1,5,7,5,3];
+
+var obj = {};
+var newArr = [];
+
+for(var item of arr) {
+	if(!obj[item]) {
+  	obj[item] = true;
+    newArr.push(item);
+  }
+}
+
+console.log(newArr);
+
 // using for loop and temp variable
 let a = [1, 1, 2, 2, 4];
 let b = [];
