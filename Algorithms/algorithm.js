@@ -634,3 +634,22 @@ var twoSum = function(nums, target) {
         }
     }
 };
+
+// another try of twoSum with index
+var twoSum = function(arr, target) {
+    let obj={};
+    let newArr = [];
+    for(let item of arr) {
+      obj[item] = arr.indexOf(item);
+    }
+    for(let item of arr) {
+    let diff = target - item;
+      if(obj[diff]) {
+        newArr.push([obj[diff],obj[item]]);
+        delete obj[diff];
+        delete obj[item];
+      }
+    }
+    return newArr;
+}
+console.log(twoSum([6, 3, 2, 5, 4], 9));
