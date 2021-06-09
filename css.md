@@ -1,7 +1,8 @@
 # CSS #
 
 * CSS
-* CSS Grid/Flex
+* [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* [CSS Flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * CSS Animation
 * SASS/LESS
 * CSS Annimation
