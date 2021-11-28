@@ -675,3 +675,18 @@ function curry(func) {
 console.log(currying(1,2,3)); //6
 console.log(currying(1)(2,3)); //6
 console.log(currying(1)(2)(3)); //6
+
+/* Another approach for Currying */
+function doSum(arr){
+  return arr.reduce((a, b)=>a+b, 0);
+}
+
+function sum(...args){
+  if(args.length === 3) return doSum(args);
+  return sum.bind(this, ...args);
+}
+
+console.log(sum(1, 2, 3)); // 6 
+console.log(sum(1)(2,3)); // 6
+console.log(sum(1,2)(3)); //6 
+console.log(sum(1)(2)(3)); // 6
